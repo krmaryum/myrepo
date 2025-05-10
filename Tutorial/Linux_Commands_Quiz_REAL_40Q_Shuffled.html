@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Linux Commands Quiz</title>
+<style>
+    body { font-family: Arial, sans-serif; padding: 20px; background-color: #eef; }
+    .question { margin-bottom: 20px; background: #fff; padding: 10px 15px; border-radius: 5px; }
+    .result { margin-top: 20px; font-weight: bold; }
+</style>
+</head>
+<body>
+<h1>Linux Commands Quiz (40 Questions - Shuffled)</h1>
+<form id="quizForm">
+<div class="question"><p><strong>1. Which command lists files in a directory?</strong></p><label><input type="radio" name="q1" value="ls"> ls</label><br><label><input type="radio" name="q1" value="cat"> cat</label><br><label><input type="radio" name="q1" value="echo"> echo</label><br></div>
+<div class="question"><p><strong>2. Which command shows current working directory?</strong></p><label><input type="radio" name="q2" value="whoami"> whoami</label><br><label><input type="radio" name="q2" value="pwd"> pwd</label><br><label><input type="radio" name="q2" value="cd"> cd</label><br></div>
+<div class="question"><p><strong>3. Which command is used to change file permissions?</strong></p><label><input type="radio" name="q3" value="chmod"> chmod</label><br><label><input type="radio" name="q3" value="umask"> umask</label><br><label><input type="radio" name="q3" value="chown"> chown</label><br></div>
+<div class="question"><p><strong>4. Which command changes file owner?</strong></p><label><input type="radio" name="q4" value="chmod"> chmod</label><br><label><input type="radio" name="q4" value="lsmod"> lsmod</label><br><label><input type="radio" name="q4" value="chown"> chown</label><br></div>
+<div class="question"><p><strong>5. Which command searches for text in files?</strong></p><label><input type="radio" name="q5" value="awk"> awk</label><br><label><input type="radio" name="q5" value="grep"> grep</label><br><label><input type="radio" name="q5" value="find"> find</label><br></div>
+<div class="question"><p><strong>6. Which command is used to view contents of a file?</strong></p><label><input type="radio" name="q6" value="cd"> cd</label><br><label><input type="radio" name="q6" value="cat"> cat</label><br><label><input type="radio" name="q6" value="ls"> ls</label><br></div>
+<div class="question"><p><strong>7. Which command creates an empty file?</strong></p><label><input type="radio" name="q7" value="touch"> touch</label><br><label><input type="radio" name="q7" value="make"> make</label><br><label><input type="radio" name="q7" value="echo"> echo</label><br></div>
+<div class="question"><p><strong>8. Which command moves or renames files?</strong></p><label><input type="radio" name="q8" value="cp"> cp</label><br><label><input type="radio" name="q8" value="mv"> mv</label><br><label><input type="radio" name="q8" value="rm"> rm</label><br></div>
+<div class="question"><p><strong>9. Which command copies files?</strong></p><label><input type="radio" name="q9" value="copy"> copy</label><br><label><input type="radio" name="q9" value="scp"> scp</label><br><label><input type="radio" name="q9" value="cp"> cp</label><br></div>
+<div class="question"><p><strong>10. Which command deletes files?</strong></p><label><input type="radio" name="q10" value="rm"> rm</label><br><label><input type="radio" name="q10" value="erase"> erase</label><br><label><input type="radio" name="q10" value="del"> del</label><br></div>
+<div class="question"><p><strong>11. Which command removes directories?</strong></p><label><input type="radio" name="q11" value="dirremove"> dirremove</label><br><label><input type="radio" name="q11" value="rm -f"> rm -f</label><br><label><input type="radio" name="q11" value="rmdir"> rmdir</label><br></div>
+<div class="question"><p><strong>12. Which command searches files by name?</strong></p><label><input type="radio" name="q12" value="locate"> locate</label><br><label><input type="radio" name="q12" value="find"> find</label><br><label><input type="radio" name="q12" value="grep"> grep</label><br></div>
+<div class="question"><p><strong>13. Which command shows disk space usage?</strong></p><label><input type="radio" name="q13" value="du -sh"> du -sh</label><br><label><input type="radio" name="q13" value="space"> space</label><br><label><input type="radio" name="q13" value="df -h"> df -h</label><br></div>
+<div class="question"><p><strong>14. Which command shows memory usage?</strong></p><label><input type="radio" name="q14" value="free -m"> free -m</label><br><label><input type="radio" name="q14" value="memstat"> memstat</label><br><label><input type="radio" name="q14" value="top -m"> top -m</label><br></div>
+<div class="question"><p><strong>15. Which command monitors system processes?</strong></p><label><input type="radio" name="q15" value="top"> top</label><br><label><input type="radio" name="q15" value="watch"> watch</label><br><label><input type="radio" name="q15" value="stat"> stat</label><br></div>
+<div class="question"><p><strong>16. Which command shows current logged in user?</strong></p><label><input type="radio" name="q16" value="who"> who</label><br><label><input type="radio" name="q16" value="id"> id</label><br><label><input type="radio" name="q16" value="whoami"> whoami</label><br></div>
+<div class="question"><p><strong>17. Which command switches user?</strong></p><label><input type="radio" name="q17" value="sudo"> sudo</label><br><label><input type="radio" name="q17" value="passwd"> passwd</label><br><label><input type="radio" name="q17" value="su"> su</label><br></div>
+<div class="question"><p><strong>18. Which command runs commands as root?</strong></p><label><input type="radio" name="q18" value="runas"> runas</label><br><label><input type="radio" name="q18" value="admin"> admin</label><br><label><input type="radio" name="q18" value="sudo"> sudo</label><br></div>
+<div class="question"><p><strong>19. Which command is used to archive files?</strong></p><label><input type="radio" name="q19" value="compress"> compress</label><br><label><input type="radio" name="q19" value="tar"> tar</label><br><label><input type="radio" name="q19" value="zip"> zip</label><br></div>
+<div class="question"><p><strong>20. Which command extracts tar.gz files?</strong></p><label><input type="radio" name="q20" value="extract"> extract</label><br><label><input type="radio" name="q20" value="untar"> untar</label><br><label><input type="radio" name="q20" value="tar -xzf"> tar -xzf</label><br></div>
+<div class="question"><p><strong>21. Which command compresses files?</strong></p><label><input type="radio" name="q21" value="tar"> tar</label><br><label><input type="radio" name="q21" value="zip"> zip</label><br><label><input type="radio" name="q21" value="gzip"> gzip</label><br></div>
+<div class="question"><p><strong>22. Which command shows running services?</strong></p><label><input type="radio" name="q22" value="servicectl"> servicectl</label><br><label><input type="radio" name="q22" value="service list"> service list</label><br><label><input type="radio" name="q22" value="systemctl status"> systemctl status</label><br></div>
+<div class="question"><p><strong>23. Which command starts a service?</strong></p><label><input type="radio" name="q23" value="systemctl run"> systemctl run</label><br><label><input type="radio" name="q23" value="service-run"> service-run</label><br><label><input type="radio" name="q23" value="systemctl start"> systemctl start</label><br></div>
+<div class="question"><p><strong>24. Which command stops a service?</strong></p><label><input type="radio" name="q24" value="killservice"> killservice</label><br><label><input type="radio" name="q24" value="systemctl stop"> systemctl stop</label><br><label><input type="radio" name="q24" value="halt"> halt</label><br></div>
+<div class="question"><p><strong>25. Which command shows calendar?</strong></p><label><input type="radio" name="q25" value="calendar"> calendar</label><br><label><input type="radio" name="q25" value="date -m"> date -m</label><br><label><input type="radio" name="q25" value="cal"> cal</label><br></div>
+<div class="question"><p><strong>26. Which command prints date and time?</strong></p><label><input type="radio" name="q26" value="time"> time</label><br><label><input type="radio" name="q26" value="now"> now</label><br><label><input type="radio" name="q26" value="date"> date</label><br></div>
+<div class="question"><p><strong>27. Which command sends output to file?</strong></p><label><input type="radio" name="q27" value=">"> ></label><br><label><input type="radio" name="q27" value="<"> <</label><br><label><input type="radio" name="q27" value="|"> |</label><br></div>
+<div class="question"><p><strong>28. Which command appends output to file?</strong></p><label><input type="radio" name="q28" value="&>"> &></label><br><label><input type="radio" name="q28" value=">>"> >></label><br><label><input type="radio" name="q28" value=">"> ></label><br></div>
+<div class="question"><p><strong>29. Which command pipes output to another command?</strong></p><label><input type="radio" name="q29" value="|"> |</label><br><label><input type="radio" name="q29" value="&"> &</label><br><label><input type="radio" name="q29" value=">"> ></label><br></div>
+<div class="question"><p><strong>30. Which command downloads files from web?</strong></p><label><input type="radio" name="q30" value="scp"> scp</label><br><label><input type="radio" name="q30" value="curl"> curl</label><br><label><input type="radio" name="q30" value="wget"> wget</label><br></div>
+<div class="question"><p><strong>31. Which command securely copies files?</strong></p><label><input type="radio" name="q31" value="ftp"> ftp</label><br><label><input type="radio" name="q31" value="copy"> copy</label><br><label><input type="radio" name="q31" value="scp"> scp</label><br></div>
+<div class="question"><p><strong>32. Which command shows environment variables?</strong></p><label><input type="radio" name="q32" value="printenv"> printenv</label><br><label><input type="radio" name="q32" value="envshow"> envshow</label><br><label><input type="radio" name="q32" value="set"> set</label><br></div>
+<div class="question"><p><strong>33. Which command edits environment variables?</strong></p><label><input type="radio" name="q33" value="varset"> varset</label><br><label><input type="radio" name="q33" value="envset"> envset</label><br><label><input type="radio" name="q33" value="export"> export</label><br></div>
+<div class="question"><p><strong>34. Which command shows shell history?</strong></p><label><input type="radio" name="q34" value="cmdlist"> cmdlist</label><br><label><input type="radio" name="q34" value="history"> history</label><br><label><input type="radio" name="q34" value="logs"> logs</label><br></div>
+<div class="question"><p><strong>35. Which command shows command manual?</strong></p><label><input type="radio" name="q35" value="info"> info</label><br><label><input type="radio" name="q35" value="man"> man</label><br><label><input type="radio" name="q35" value="help"> help</label><br></div>
+<div class="question"><p><strong>36. Which command repeats last command?</strong></p><label><input type="radio" name="q36" value="!!"> !!</label><br><label><input type="radio" name="q36" value="lastcmd"> lastcmd</label><br><label><input type="radio" name="q36" value="repeat"> repeat</label><br></div>
+<div class="question"><p><strong>37. Which command clears screen?</strong></p><label><input type="radio" name="q37" value="clear"> clear</label><br><label><input type="radio" name="q37" value="reset"> reset</label><br><label><input type="radio" name="q37" value="cls"> cls</label><br></div>
+<div class="question"><p><strong>38. Which command reboots system?</strong></p><label><input type="radio" name="q38" value="systemreset"> systemreset</label><br><label><input type="radio" name="q38" value="reboot"> reboot</label><br><label><input type="radio" name="q38" value="shutdown -r"> shutdown -r</label><br></div>
+<div class="question"><p><strong>39. Which command shuts down system?</strong></p><label><input type="radio" name="q39" value="poweroff"> poweroff</label><br><label><input type="radio" name="q39" value="halt -s"> halt -s</label><br><label><input type="radio" name="q39" value="shutdown -h now"> shutdown -h now</label><br></div>
+<div class="question"><p><strong>40. Which command shows kernel version?</strong></p><label><input type="radio" name="q40" value="version"> version</label><br><label><input type="radio" name="q40" value="uname -r"> uname -r</label><br><label><input type="radio" name="q40" value="kernelver"> kernelver</label><br></div>
+
+<button type="button" onclick="checkAnswers()">Submit</button>
+<div id="result" class="result"></div>
+</form>
+<script>
+const answers = {'q1': 'ls', 'q2': 'pwd', 'q3': 'chmod', 'q4': 'chown', 'q5': 'grep', 'q6': 'cat', 'q7': 'touch', 'q8': 'mv', 'q9': 'cp', 'q10': 'rm', 'q11': 'rmdir', 'q12': 'find', 'q13': 'df -h', 'q14': 'free -m', 'q15': 'top', 'q16': 'whoami', 'q17': 'su', 'q18': 'sudo', 'q19': 'tar', 'q20': 'tar -xzf', 'q21': 'gzip', 'q22': 'systemctl status', 'q23': 'systemctl start', 'q24': 'systemctl stop', 'q25': 'cal', 'q26': 'date', 'q27': '>', 'q28': '>>', 'q29': '|', 'q30': 'wget', 'q31': 'scp', 'q32': 'printenv', 'q33': 'export', 'q34': 'history', 'q35': 'man', 'q36': '!!', 'q37': 'clear', 'q38': 'reboot', 'q39': 'shutdown -h now', 'q40': 'uname -r'};
+function checkAnswers() {
+    let score = 0;
+    let total = Object.keys(answers).length;
+    let resultHTML = "";
+    for (const [key, value] of Object.entries(answers)) {
+        const selected = document.querySelector(`input[name="${key}"]:checked`);
+        if (selected && selected.value === value) {
+            score++;
+            resultHTML += `<p style='color:green;'>Question ${key.substring(1)}: Correct</p>`;
+        } else {
+            resultHTML += `<p style='color:red;'>Question ${key.substring(1)}: Wrong (Correct: ${value})</p>`;
+        }
+    }
+    document.getElementById("result").innerHTML = `<h3>You scored ${score} out of ${total}</h3>` + resultHTML;
+}
+</script>
+</body>
+</html>

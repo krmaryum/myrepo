@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>General Linux Knowledge Quiz</title>
+<style>
+    body { font-family: Arial, sans-serif; padding: 20px; background-color: #eef; }
+    .question { margin-bottom: 20px; background: #fff; padding: 10px 15px; border-radius: 5px; }
+    .result { margin-top: 20px; font-weight: bold; }
+</style>
+</head>
+<body>
+<h1>General Linux Knowledge Quiz (40 Questions - Shuffled)</h1>
+<form id="quizForm">
+<div class="question"><p><strong>1. Who developed the Linux kernel?</strong></p><label><input type="radio" name="q1" value="Dennis Ritchie"> Dennis Ritchie</label><br><label><input type="radio" name="q1" value="Linus Torvalds"> Linus Torvalds</label><br><label><input type="radio" name="q1" value="Richard Stallman"> Richard Stallman</label><br></div>
+<div class="question"><p><strong>2. What is the Linux kernel written in?</strong></p><label><input type="radio" name="q2" value="Java"> Java</label><br><label><input type="radio" name="q2" value="Python"> Python</label><br><label><input type="radio" name="q2" value="C"> C</label><br></div>
+<div class="question"><p><strong>3. What does GNU stand for?</strong></p><label><input type="radio" name="q3" value="GNU's Not Unix"> GNU's Not Unix</label><br><label><input type="radio" name="q3" value="Global New Unix"> Global New Unix</label><br><label><input type="radio" name="q3" value="General Network Unix"> General Network Unix</label><br></div>
+<div class="question"><p><strong>4. Which of these is a Linux distribution?</strong></p><label><input type="radio" name="q4" value="Ubuntu"> Ubuntu</label><br><label><input type="radio" name="q4" value="MacOS"> MacOS</label><br><label><input type="radio" name="q4" value="Windows"> Windows</label><br></div>
+<div class="question"><p><strong>5. What is the default shell in most Linux systems?</strong></p><label><input type="radio" name="q5" value="fish"> fish</label><br><label><input type="radio" name="q5" value="bash"> bash</label><br><label><input type="radio" name="q5" value="zsh"> zsh</label><br></div>
+<div class="question"><p><strong>6. Which command gives superuser access?</strong></p><label><input type="radio" name="q6" value="su root"> su root</label><br><label><input type="radio" name="q6" value="admin"> admin</label><br><label><input type="radio" name="q6" value="sudo"> sudo</label><br></div>
+<div class="question"><p><strong>7. What is the root directory in Linux?</strong></p><label><input type="radio" name="q7" value="/root"> /root</label><br><label><input type="radio" name="q7" value="/home"> /home</label><br><label><input type="radio" name="q7" value="/"> /</label><br></div>
+<div class="question"><p><strong>8. What type of system is Linux?</strong></p><label><input type="radio" name="q8" value="Open-source operating system"> Open-source operating system</label><br><label><input type="radio" name="q8" value="Proprietary shell"> Proprietary shell</label><br><label><input type="radio" name="q8" value="Desktop GUI"> Desktop GUI</label><br></div>
+<div class="question"><p><strong>9. Which file stores user accounts?</strong></p><label><input type="radio" name="q9" value="/etc/user"> /etc/user</label><br><label><input type="radio" name="q9" value="/usr/passwd"> /usr/passwd</label><br><label><input type="radio" name="q9" value="/etc/passwd"> /etc/passwd</label><br></div>
+<div class="question"><p><strong>10. What does open-source mean?</strong></p><label><input type="radio" name="q10" value="Free to install"> Free to install</label><br><label><input type="radio" name="q10" value="Code is publicly available"> Code is publicly available</label><br><label><input type="radio" name="q10" value="Supports Windows"> Supports Windows</label><br></div>
+<div class="question"><p><strong>11. Which license does Linux use?</strong></p><label><input type="radio" name="q11" value="BSD"> BSD</label><br><label><input type="radio" name="q11" value="GPL"> GPL</label><br><label><input type="radio" name="q11" value="MIT"> MIT</label><br></div>
+<div class="question"><p><strong>12. What is the main function of the kernel?</strong></p><label><input type="radio" name="q12" value="Start applications"> Start applications</label><br><label><input type="radio" name="q12" value="Display graphics"> Display graphics</label><br><label><input type="radio" name="q12" value="Manage system resources"> Manage system resources</label><br></div>
+<div class="question"><p><strong>13. Which command lists current directory contents?</strong></p><label><input type="radio" name="q13" value="dirinfo"> dirinfo</label><br><label><input type="radio" name="q13" value="ls"> ls</label><br><label><input type="radio" name="q13" value="pwd"> pwd</label><br></div>
+<div class="question"><p><strong>14. Where are user home directories stored?</strong></p><label><input type="radio" name="q14" value="/root"> /root</label><br><label><input type="radio" name="q14" value="/usr/home"> /usr/home</label><br><label><input type="radio" name="q14" value="/home"> /home</label><br></div>
+<div class="question"><p><strong>15. Which directory contains device files?</strong></p><label><input type="radio" name="q15" value="/mnt"> /mnt</label><br><label><input type="radio" name="q15" value="/dev"> /dev</label><br><label><input type="radio" name="q15" value="/media"> /media</label><br></div>
+<div class="question"><p><strong>16. Which command displays system date/time?</strong></p><label><input type="radio" name="q16" value="clock"> clock</label><br><label><input type="radio" name="q16" value="date"> date</label><br><label><input type="radio" name="q16" value="cal"> cal</label><br></div>
+<div class="question"><p><strong>17. Which init system is used in RHEL 8?</strong></p><label><input type="radio" name="q17" value="systemd"> systemd</label><br><label><input type="radio" name="q17" value="rc.d"> rc.d</label><br><label><input type="radio" name="q17" value="initd"> initd</label><br></div>
+<div class="question"><p><strong>18. What does 'man' command do?</strong></p><label><input type="radio" name="q18" value="Displays manual page"> Displays manual page</label><br><label><input type="radio" name="q18" value="Executes program"> Executes program</label><br><label><input type="radio" name="q18" value="Logs command"> Logs command</label><br></div>
+<div class="question"><p><strong>19. Which symbol represents the home directory?</strong></p><label><input type="radio" name="q19" value="~"> ~</label><br><label><input type="radio" name="q19" value="/"> /</label><br><label><input type="radio" name="q19" value="$HOME/"> $HOME/</label><br></div>
+<div class="question"><p><strong>20. Which file defines environment variables?</strong></p><label><input type="radio" name="q20" value="~/.bashrc"> ~/.bashrc</label><br><label><input type="radio" name="q20" value="/etc/passwd"> /etc/passwd</label><br><label><input type="radio" name="q20" value="~/.ssh/config"> ~/.ssh/config</label><br></div>
+<div class="question"><p><strong>21. Which directory stores configuration files?</strong></p><label><input type="radio" name="q21" value="/conf"> /conf</label><br><label><input type="radio" name="q21" value="/etc"> /etc</label><br><label><input type="radio" name="q21" value="/usr/bin"> /usr/bin</label><br></div>
+<div class="question"><p><strong>22. Which partition stores bootloader?</strong></p><label><input type="radio" name="q22" value="/etc"> /etc</label><br><label><input type="radio" name="q22" value="/boot"> /boot</label><br><label><input type="radio" name="q22" value="/mnt"> /mnt</label><br></div>
+<div class="question"><p><strong>23. Which user has UID 0?</strong></p><label><input type="radio" name="q23" value="root"> root</label><br><label><input type="radio" name="q23" value="admin"> admin</label><br><label><input type="radio" name="q23" value="nobody"> nobody</label><br></div>
+<div class="question"><p><strong>24. Which command reboots the system?</strong></p><label><input type="radio" name="q24" value="shutdown -r"> shutdown -r</label><br><label><input type="radio" name="q24" value="reboot"> reboot</label><br><label><input type="radio" name="q24" value="restart"> restart</label><br></div>
+<div class="question"><p><strong>25. Which Linux distribution is based on Debian?</strong></p><label><input type="radio" name="q25" value="Fedora"> Fedora</label><br><label><input type="radio" name="q25" value="CentOS"> CentOS</label><br><label><input type="radio" name="q25" value="Ubuntu"> Ubuntu</label><br></div>
+<div class="question"><p><strong>26. What is a package manager for RHEL?</strong></p><label><input type="radio" name="q26" value="apt"> apt</label><br><label><input type="radio" name="q26" value="dnf"> dnf</label><br><label><input type="radio" name="q26" value="yum"> yum</label><br></div>
+<div class="question"><p><strong>27. Which file lists mounted filesystems?</strong></p><label><input type="radio" name="q27" value="/etc/mounts"> /etc/mounts</label><br><label><input type="radio" name="q27" value="/etc/fstab"> /etc/fstab</label><br><label><input type="radio" name="q27" value="/boot/mounts"> /boot/mounts</label><br></div>
+<div class="question"><p><strong>28. Which file shows login history?</strong></p><label><input type="radio" name="q28" value="/etc/login.log"> /etc/login.log</label><br><label><input type="radio" name="q28" value="/var/log/wtmp"> /var/log/wtmp</label><br><label><input type="radio" name="q28" value="/var/log/auth.log"> /var/log/auth.log</label><br></div>
+<div class="question"><p><strong>29. Which user has maximum privileges?</strong></p><label><input type="radio" name="q29" value="sudo"> sudo</label><br><label><input type="radio" name="q29" value="root"> root</label><br><label><input type="radio" name="q29" value="admin"> admin</label><br></div>
+<div class="question"><p><strong>30. What does the command 'who' display?</strong></p><label><input type="radio" name="q30" value="User info"> User info</label><br><label><input type="radio" name="q30" value="Logged-in users"> Logged-in users</label><br><label><input type="radio" name="q30" value="System time"> System time</label><br></div>
+<div class="question"><p><strong>31. What is the function of a shell?</strong></p><label><input type="radio" name="q31" value="Interface between user and kernel"> Interface between user and kernel</label><br><label><input type="radio" name="q31" value="Compiles code"> Compiles code</label><br><label><input type="radio" name="q31" value="Stores files"> Stores files</label><br></div>
+<div class="question"><p><strong>32. What is the purpose of 'cron'?</strong></p><label><input type="radio" name="q32" value="Monitor CPU"> Monitor CPU</label><br><label><input type="radio" name="q32" value="Schedule recurring tasks"> Schedule recurring tasks</label><br><label><input type="radio" name="q32" value="Check logs"> Check logs</label><br></div>
+<div class="question"><p><strong>33. What is the Linux mascot?</strong></p><label><input type="radio" name="q33" value="Duke"> Duke</label><br><label><input type="radio" name="q33" value="Tux the penguin"> Tux the penguin</label><br><label><input type="radio" name="q33" value="GNU Cow"> GNU Cow</label><br></div>
+<div class="question"><p><strong>34. Which directory holds system libraries?</strong></p><label><input type="radio" name="q34" value="/usr"> /usr</label><br><label><input type="radio" name="q34" value="/lib"> /lib</label><br><label><input type="radio" name="q34" value="/mnt"> /mnt</label><br></div>
+<div class="question"><p><strong>35. What does 'echo $?' display?</strong></p><label><input type="radio" name="q35" value="Shell version"> Shell version</label><br><label><input type="radio" name="q35" value="Current PID"> Current PID</label><br><label><input type="radio" name="q35" value="Exit status of last command"> Exit status of last command</label><br></div>
+<div class="question"><p><strong>36. What is the default text editor in CLI?</strong></p><label><input type="radio" name="q36" value="gedit"> gedit</label><br><label><input type="radio" name="q36" value="nano"> nano</label><br><label><input type="radio" name="q36" value="vi"> vi</label><br></div>
+<div class="question"><p><strong>37. Which file stores system hostname?</strong></p><label><input type="radio" name="q37" value="/etc/hostname"> /etc/hostname</label><br><label><input type="radio" name="q37" value="/etc/hosts"> /etc/hosts</label><br><label><input type="radio" name="q37" value="/etc/sysname"> /etc/sysname</label><br></div>
+<div class="question"><p><strong>38. Which port does SSH use?</strong></p><label><input type="radio" name="q38" value="22"> 22</label><br><label><input type="radio" name="q38" value="21"> 21</label><br><label><input type="radio" name="q38" value="80"> 80</label><br></div>
+<div class="question"><p><strong>39. What does 'df' show?</strong></p><label><input type="radio" name="q39" value="Free memory"> Free memory</label><br><label><input type="radio" name="q39" value="Disk space usage"> Disk space usage</label><br><label><input type="radio" name="q39" value="File listing"> File listing</label><br></div>
+<div class="question"><p><strong>40. What does the command 'uname -a' show?</strong></p><label><input type="radio" name="q40" value="Username"> Username</label><br><label><input type="radio" name="q40" value="Disk info"> Disk info</label><br><label><input type="radio" name="q40" value="All system information"> All system information</label><br></div>
+
+<button type="button" onclick="checkAnswers()">Submit</button>
+<div id="result" class="result"></div>
+</form>
+<script>
+const answers = {'q1': 'Linus Torvalds', 'q2': 'C', 'q3': "GNU's Not Unix", 'q4': 'Ubuntu', 'q5': 'bash', 'q6': 'sudo', 'q7': '/', 'q8': 'Open-source operating system', 'q9': '/etc/passwd', 'q10': 'Code is publicly available', 'q11': 'GPL', 'q12': 'Manage system resources', 'q13': 'ls', 'q14': '/home', 'q15': '/dev', 'q16': 'date', 'q17': 'systemd', 'q18': 'Displays manual page', 'q19': '~', 'q20': '~/.bashrc', 'q21': '/etc', 'q22': '/boot', 'q23': 'root', 'q24': 'reboot', 'q25': 'Ubuntu', 'q26': 'yum', 'q27': '/etc/fstab', 'q28': '/var/log/wtmp', 'q29': 'root', 'q30': 'Logged-in users', 'q31': 'Interface between user and kernel', 'q32': 'Schedule recurring tasks', 'q33': 'Tux the penguin', 'q34': '/lib', 'q35': 'Exit status of last command', 'q36': 'vi', 'q37': '/etc/hostname', 'q38': '22', 'q39': 'Disk space usage', 'q40': 'All system information'};
+function checkAnswers() {
+    let score = 0;
+    let total = Object.keys(answers).length;
+    let resultHTML = "";
+    for (const [key, value] of Object.entries(answers)) {
+        const selected = document.querySelector(`input[name="${key}"]:checked`);
+        if (selected && selected.value === value) {
+            score++;
+            resultHTML += `<p style='color:green;'>Question ${key.substring(1)}: Correct</p>`;
+        } else {
+            resultHTML += `<p style='color:red;'>Question ${key.substring(1)}: Wrong (Correct: ${value})</p>`;
+        }
+    }
+    document.getElementById("result").innerHTML = `<h3>You scored ${score} out of ${total}</h3>` + resultHTML;
+}
+</script>
+</body>
+</html>

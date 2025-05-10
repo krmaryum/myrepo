@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Network Configuration Quiz</title>
+<style>
+    body { font-family: Arial, sans-serif; padding: 20px; background-color: #eef; }
+    .question { margin-bottom: 20px; background: #fff; padding: 10px 15px; border-radius: 5px; }
+    .result { margin-top: 20px; font-weight: bold; }
+</style>
+</head>
+<body>
+<h1>Network Configuration Quiz (40 Questions - Shuffled)</h1>
+<form id="quizForm">
+<div class="question"><p><strong>1. Which command is used to display IP address?</strong></p><label><input type="radio" name="q1" value="ifconfig -a"> ifconfig -a</label><br><label><input type="radio" name="q1" value="ip addr show"> ip addr show</label><br><label><input type="radio" name="q1" value="netstat -ip"> netstat -ip</label><br></div>
+<div class="question"><p><strong>2. Which file contains hostname configuration?</strong></p><label><input type="radio" name="q2" value="/etc/hosts"> /etc/hosts</label><br><label><input type="radio" name="q2" value="/etc/hostname"> /etc/hostname</label><br><label><input type="radio" name="q2" value="/etc/resolv.conf"> /etc/resolv.conf</label><br></div>
+<div class="question"><p><strong>3. What does 'ping' command use to test connectivity?</strong></p><label><input type="radio" name="q3" value="ICMP"> ICMP</label><br><label><input type="radio" name="q3" value="TCP"> TCP</label><br><label><input type="radio" name="q3" value="DNS"> DNS</label><br></div>
+<div class="question"><p><strong>4. Which command shows current routing table?</strong></p><label><input type="radio" name="q4" value="ip r"> ip r</label><br><label><input type="radio" name="q4" value="ip route"> ip route</label><br><label><input type="radio" name="q4" value="netstat -t"> netstat -t</label><br></div>
+<div class="question"><p><strong>5. Which command is used to change hostname?</strong></p><label><input type="radio" name="q5" value="hostname -n"> hostname -n</label><br><label><input type="radio" name="q5" value="hostnamectl set-hostname"> hostnamectl set-hostname</label><br><label><input type="radio" name="q5" value="set-hostname"> set-hostname</label><br></div>
+<div class="question"><p><strong>6. How do you restart network service in RHEL 7+?</strong></p><label><input type="radio" name="q6" value="systemctl restart network"> systemctl restart network</label><br><label><input type="radio" name="q6" value="restart-network"> restart-network</label><br><label><input type="radio" name="q6" value="service network restart"> service network restart</label><br></div>
+<div class="question"><p><strong>7. What is the default network interface name in RHEL 8?</strong></p><label><input type="radio" name="q7" value="eth0"> eth0</label><br><label><input type="radio" name="q7" value="ens33"> ens33</label><br><label><input type="radio" name="q7" value="enp0s3"> enp0s3</label><br></div>
+<div class="question"><p><strong>8. Which file maps hostnames to IP addresses?</strong></p><label><input type="radio" name="q8" value="/etc/hostname"> /etc/hostname</label><br><label><input type="radio" name="q8" value="/etc/network"> /etc/network</label><br><label><input type="radio" name="q8" value="/etc/hosts"> /etc/hosts</label><br></div>
+<div class="question"><p><strong>9. Which command displays open network ports?</strong></p><label><input type="radio" name="q9" value="ss -tuln"> ss -tuln</label><br><label><input type="radio" name="q9" value="netstat -p"> netstat -p</label><br><label><input type="radio" name="q9" value="tcpdump -l"> tcpdump -l</label><br></div>
+<div class="question"><p><strong>10. What is the default port for SSH?</strong></p><label><input type="radio" name="q10" value="22"> 22</label><br><label><input type="radio" name="q10" value="23"> 23</label><br><label><input type="radio" name="q10" value="21"> 21</label><br></div>
+<div class="question"><p><strong>11. Which command tests DNS resolution?</strong></p><label><input type="radio" name="q11" value="dig -resolve"> dig -resolve</label><br><label><input type="radio" name="q11" value="nslookup"> nslookup</label><br><label><input type="radio" name="q11" value="dns-check"> dns-check</label><br></div>
+<div class="question"><p><strong>12. How to display interface statistics?</strong></p><label><input type="radio" name="q12" value="ip -s link"> ip -s link</label><br><label><input type="radio" name="q12" value="ifstatus"> ifstatus</label><br><label><input type="radio" name="q12" value="netstat -i"> netstat -i</label><br></div>
+<div class="question"><p><strong>13. Which tool is used to capture network traffic?</strong></p><label><input type="radio" name="q13" value="netstat"> netstat</label><br><label><input type="radio" name="q13" value="wiresharkcli"> wiresharkcli</label><br><label><input type="radio" name="q13" value="tcpdump"> tcpdump</label><br></div>
+<div class="question"><p><strong>14. Which protocol is used by ping?</strong></p><label><input type="radio" name="q14" value="UDP"> UDP</label><br><label><input type="radio" name="q14" value="HTTP"> HTTP</label><br><label><input type="radio" name="q14" value="ICMP"> ICMP</label><br></div>
+<div class="question"><p><strong>15. How to enable a network interface?</strong></p><label><input type="radio" name="q15" value="ip up"> ip up</label><br><label><input type="radio" name="q15" value="ip link set up"> ip link set up</label><br><label><input type="radio" name="q15" value="net enable"> net enable</label><br></div>
+<div class="question"><p><strong>16. Which command flushes DNS cache in Linux?</strong></p><label><input type="radio" name="q16" value="resolvctl --reset"> resolvctl --reset</label><br><label><input type="radio" name="q16" value="systemd-resolve --flush-caches"> systemd-resolve --flush-caches</label><br><label><input type="radio" name="q16" value="flushdns"> flushdns</label><br></div>
+<div class="question"><p><strong>17. Which file contains static DNS entries?</strong></p><label><input type="radio" name="q17" value="/etc/sysconfig/dns"> /etc/sysconfig/dns</label><br><label><input type="radio" name="q17" value="/etc/resolv.conf"> /etc/resolv.conf</label><br><label><input type="radio" name="q17" value="/etc/dns.conf"> /etc/dns.conf</label><br></div>
+<div class="question"><p><strong>18. Which port is used by HTTP?</strong></p><label><input type="radio" name="q18" value="443"> 443</label><br><label><input type="radio" name="q18" value="80"> 80</label><br><label><input type="radio" name="q18" value="25"> 25</label><br></div>
+<div class="question"><p><strong>19. Which port is used by HTTPS?</strong></p><label><input type="radio" name="q19" value="110"> 110</label><br><label><input type="radio" name="q19" value="80"> 80</label><br><label><input type="radio" name="q19" value="443"> 443</label><br></div>
+<div class="question"><p><strong>20. Which port is used by DNS?</strong></p><label><input type="radio" name="q20" value="53"> 53</label><br><label><input type="radio" name="q20" value="110"> 110</label><br><label><input type="radio" name="q20" value="25"> 25</label><br></div>
+<div class="question"><p><strong>21. Which command configures IP in CLI?</strong></p><label><input type="radio" name="q21" value="ip set addr"> ip set addr</label><br><label><input type="radio" name="q21" value="net config"> net config</label><br><label><input type="radio" name="q21" value="ip addr add"> ip addr add</label><br></div>
+<div class="question"><p><strong>22. Which service manages DNS resolution in systemd?</strong></p><label><input type="radio" name="q22" value="named"> named</label><br><label><input type="radio" name="q22" value="systemd-resolved"> systemd-resolved</label><br><label><input type="radio" name="q22" value="dnsmasq"> dnsmasq</label><br></div>
+<div class="question"><p><strong>23. What is the gateway in networking?</strong></p><label><input type="radio" name="q23" value="Local IP"> Local IP</label><br><label><input type="radio" name="q23" value="Loopback device"> Loopback device</label><br><label><input type="radio" name="q23" value="Default route to reach other networks"> Default route to reach other networks</label><br></div>
+<div class="question"><p><strong>24. How to set static IP temporarily?</strong></p><label><input type="radio" name="q24" value="ip addr add x.x.x.x dev eth0"> ip addr add x.x.x.x dev eth0</label><br><label><input type="radio" name="q24" value="ifconfig set x.x"> ifconfig set x.x</label><br><label><input type="radio" name="q24" value="netconfig"> netconfig</label><br></div>
+<div class="question"><p><strong>25. Which tool configures persistent IP in RHEL?</strong></p><label><input type="radio" name="q25" value="net-setup"> net-setup</label><br><label><input type="radio" name="q25" value="nmtui"> nmtui</label><br><label><input type="radio" name="q25" value="nm-edit"> nm-edit</label><br></div>
+<div class="question"><p><strong>26. Which command lists all network interfaces?</strong></p><label><input type="radio" name="q26" value="ip if list"> ip if list</label><br><label><input type="radio" name="q26" value="ip link show"> ip link show</label><br><label><input type="radio" name="q26" value="netdev list"> netdev list</label><br></div>
+<div class="question"><p><strong>27. How to list listening ports?</strong></p><label><input type="radio" name="q27" value="ss -ltn"> ss -ltn</label><br><label><input type="radio" name="q27" value="ip port show"> ip port show</label><br><label><input type="radio" name="q27" value="lsports"> lsports</label><br></div>
+<div class="question"><p><strong>28. What is loopback IP address?</strong></p><label><input type="radio" name="q28" value="192.168.0.1"> 192.168.0.1</label><br><label><input type="radio" name="q28" value="127.0.0.1"> 127.0.0.1</label><br><label><input type="radio" name="q28" value="0.0.0.0"> 0.0.0.0</label><br></div>
+<div class="question"><p><strong>29. Which command tests port connectivity?</strong></p><label><input type="radio" name="q29" value="telnet"> telnet</label><br><label><input type="radio" name="q29" value="pingport"> pingport</label><br><label><input type="radio" name="q29" value="ip connect"> ip connect</label><br></div>
+<div class="question"><p><strong>30. What is a subnet mask?</strong></p><label><input type="radio" name="q30" value="Limits TCP"> Limits TCP</label><br><label><input type="radio" name="q30" value="Mask IP address"> Mask IP address</label><br><label><input type="radio" name="q30" value="Defines network and host bits"> Defines network and host bits</label><br></div>
+<div class="question"><p><strong>31. What is CIDR notation?</strong></p><label><input type="radio" name="q31" value="IP with prefix length"> IP with prefix length</label><br><label><input type="radio" name="q31" value="IP mask type"> IP mask type</label><br><label><input type="radio" name="q31" value="Device ID"> Device ID</label><br></div>
+<div class="question"><p><strong>32. What command shows neighbor cache?</strong></p><label><input type="radio" name="q32" value="ip ns show"> ip ns show</label><br><label><input type="radio" name="q32" value="ip neigh"> ip neigh</label><br><label><input type="radio" name="q32" value="netstat -a"> netstat -a</label><br></div>
+<div class="question"><p><strong>33. What tool tests speed of connection?</strong></p><label><input type="radio" name="q33" value="pingrate"> pingrate</label><br><label><input type="radio" name="q33" value="netspeed"> netspeed</label><br><label><input type="radio" name="q33" value="iperf"> iperf</label><br></div>
+<div class="question"><p><strong>34. Which service auto-assigns IPs?</strong></p><label><input type="radio" name="q34" value="DNS"> DNS</label><br><label><input type="radio" name="q34" value="SSH"> SSH</label><br><label><input type="radio" name="q34" value="DHCP"> DHCP</label><br></div>
+<div class="question"><p><strong>35. How to display wireless interfaces?</strong></p><label><input type="radio" name="q35" value="wifi ls"> wifi ls</label><br><label><input type="radio" name="q35" value="ip link"> ip link</label><br><label><input type="radio" name="q35" value="iw dev"> iw dev</label><br></div>
+<div class="question"><p><strong>36. What is MAC address?</strong></p><label><input type="radio" name="q36" value="Router name"> Router name</label><br><label><input type="radio" name="q36" value="Hardware address of NIC"> Hardware address of NIC</label><br><label><input type="radio" name="q36" value="Device IP"> Device IP</label><br></div>
+<div class="question"><p><strong>37. Which command shows MAC address?</strong></p><label><input type="radio" name="q37" value="ip link"> ip link</label><br><label><input type="radio" name="q37" value="ifconfig hw"> ifconfig hw</label><br><label><input type="radio" name="q37" value="netstat -m"> netstat -m</label><br></div>
+<div class="question"><p><strong>38. Which tool monitors bandwidth in terminal?</strong></p><label><input type="radio" name="q38" value="iftop"> iftop</label><br><label><input type="radio" name="q38" value="tcpstat"> tcpstat</label><br><label><input type="radio" name="q38" value="nload"> nload</label><br></div>
+<div class="question"><p><strong>39. Which protocol resolves IP to MAC?</strong></p><label><input type="radio" name="q39" value="ARP"> ARP</label><br><label><input type="radio" name="q39" value="RARP"> RARP</label><br><label><input type="radio" name="q39" value="ICMP"> ICMP</label><br></div>
+
+<button type="button" onclick="checkAnswers()">Submit</button>
+<div id="result" class="result"></div>
+</form>
+<script>
+const answers = {'q1': 'ip addr show', 'q2': '/etc/hostname', 'q3': 'ICMP', 'q4': 'ip route', 'q5': 'hostnamectl set-hostname', 'q6': 'systemctl restart network', 'q7': 'ens33', 'q8': '/etc/hosts', 'q9': 'ss -tuln', 'q10': '22', 'q11': 'nslookup', 'q12': 'ip -s link', 'q13': 'tcpdump', 'q14': 'ICMP', 'q15': 'ip link set up', 'q16': 'systemd-resolve --flush-caches', 'q17': '/etc/resolv.conf', 'q18': '80', 'q19': '443', 'q20': '53', 'q21': 'ip addr add', 'q22': 'systemd-resolved', 'q23': 'Default route to reach other networks', 'q24': 'ip addr add x.x.x.x dev eth0', 'q25': 'nmtui', 'q26': 'ip link show', 'q27': 'ss -ltn', 'q28': '127.0.0.1', 'q29': 'telnet', 'q30': 'Defines network and host bits', 'q31': 'IP with prefix length', 'q32': 'ip neigh', 'q33': 'iperf', 'q34': 'DHCP', 'q35': 'iw dev', 'q36': 'Hardware address of NIC', 'q37': 'ip link', 'q38': 'nload', 'q39': 'ARP'};
+function checkAnswers() {
+    let score = 0;
+    let total = Object.keys(answers).length;
+    let resultHTML = "";
+    for (const [key, value] of Object.entries(answers)) {
+        const selected = document.querySelector(`input[name="${key}"]:checked`);
+        if (selected && selected.value === value) {
+            score++;
+            resultHTML += `<p style='color:green;'>Question ${key.substring(1)}: Correct</p>`;
+        } else {
+            resultHTML += `<p style='color:red;'>Question ${key.substring(1)}: Wrong (Correct: ${value})</p>`;
+        }
+    }
+    document.getElementById("result").innerHTML = `<h3>You scored ${score} out of ${total}</h3>` + resultHTML;
+}
+</script>
+</body>
+</html>

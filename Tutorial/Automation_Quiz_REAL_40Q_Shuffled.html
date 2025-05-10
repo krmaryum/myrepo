@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Linux Automation Quiz</title>
+<style>
+    body { font-family: Arial, sans-serif; padding: 20px; background-color: #eef; }
+    .question { margin-bottom: 20px; background: #fff; padding: 10px 15px; border-radius: 5px; }
+    .result { margin-top: 20px; font-weight: bold; }
+</style>
+</head>
+<body>
+<h1>Linux Automation Quiz (40 Questions - Shuffled)</h1>
+<form id="quizForm">
+<div class="question"><p><strong>1. Which tool is used for automating system configuration?</strong></p><label><input type="radio" name="q1" value="cron"> cron</label><br><label><input type="radio" name="q1" value="Ansible"> Ansible</label><br><label><input type="radio" name="q1" value="SSH"> SSH</label><br></div>
+<div class="question"><p><strong>2. Which command is used to schedule repetitive tasks?</strong></p><label><input type="radio" name="q2" value="at"> at</label><br><label><input type="radio" name="q2" value="task"> task</label><br><label><input type="radio" name="q2" value="cron"> cron</label><br></div>
+<div class="question"><p><strong>3. Which command schedules one-time tasks?</strong></p><label><input type="radio" name="q3" value="at"> at</label><br><label><input type="radio" name="q3" value="systemd"> systemd</label><br><label><input type="radio" name="q3" value="cron"> cron</label><br></div>
+<div class="question"><p><strong>4. Which file lists user cron jobs?</strong></p><label><input type="radio" name="q4" value="list-cron"> list-cron</label><br><label><input type="radio" name="q4" value="crontab -l"> crontab -l</label><br><label><input type="radio" name="q4" value="cronlist"> cronlist</label><br></div>
+<div class="question"><p><strong>5. Which file holds system-wide cron jobs?</strong></p><label><input type="radio" name="q5" value="/usr/cron.d/system"> /usr/cron.d/system</label><br><label><input type="radio" name="q5" value="/etc/crontab"> /etc/crontab</label><br><label><input type="radio" name="q5" value="/var/spool/cron"> /var/spool/cron</label><br></div>
+<div class="question"><p><strong>6. What does the * symbol mean in cron?</strong></p><label><input type="radio" name="q6" value="Only on reboot"> Only on reboot</label><br><label><input type="radio" name="q6" value="Never run"> Never run</label><br><label><input type="radio" name="q6" value="Every time unit"> Every time unit</label><br></div>
+<div class="question"><p><strong>7. Which cron field specifies the day of the week?</strong></p><label><input type="radio" name="q7" value="1st"> 1st</label><br><label><input type="radio" name="q7" value="5th"> 5th</label><br><label><input type="radio" name="q7" value="3rd"> 3rd</label><br></div>
+<div class="question"><p><strong>8. How to edit current user's cron jobs?</strong></p><label><input type="radio" name="q8" value="cronedit"> cronedit</label><br><label><input type="radio" name="q8" value="crontab -e"> crontab -e</label><br><label><input type="radio" name="q8" value="crontab --edit"> crontab --edit</label><br></div>
+<div class="question"><p><strong>9. Which command lists cron jobs for another user?</strong></p><label><input type="radio" name="q9" value="cron -u user"> cron -u user</label><br><label><input type="radio" name="q9" value="listcron user"> listcron user</label><br><label><input type="radio" name="q9" value="crontab -u user -l"> crontab -u user -l</label><br></div>
+<div class="question"><p><strong>10. Which command shows scheduled 'at' jobs?</strong></p><label><input type="radio" name="q10" value="ats"> ats</label><br><label><input type="radio" name="q10" value="atq"> atq</label><br><label><input type="radio" name="q10" value="listat"> listat</label><br></div>
+<div class="question"><p><strong>11. Which file logs cron execution?</strong></p><label><input type="radio" name="q11" value="/var/log/cron"> /var/log/cron</label><br><label><input type="radio" name="q11" value="/var/log/crontab"> /var/log/crontab</label><br><label><input type="radio" name="q11" value="/etc/cron.log"> /etc/cron.log</label><br></div>
+<div class="question"><p><strong>12. What does 'sleep 5' do in script?</strong></p><label><input type="radio" name="q12" value="Delays cron"> Delays cron</label><br><label><input type="radio" name="q12" value="Waits 5 seconds"> Waits 5 seconds</label><br><label><input type="radio" name="q12" value="Pauses process"> Pauses process</label><br></div>
+<div class="question"><p><strong>13. Which command makes script executable?</strong></p><label><input type="radio" name="q13" value="setperm"> setperm</label><br><label><input type="radio" name="q13" value="chmod +x"> chmod +x</label><br><label><input type="radio" name="q13" value="makeexec"> makeexec</label><br></div>
+<div class="question"><p><strong>14. Which extension is commonly used for shell scripts?</strong></p><label><input type="radio" name="q14" value=".bash"> .bash</label><br><label><input type="radio" name="q14" value=".exe"> .exe</label><br><label><input type="radio" name="q14" value=".sh"> .sh</label><br></div>
+<div class="question"><p><strong>15. Which shebang is used for bash script?</strong></p><label><input type="radio" name="q15" value="#!/usr/bash"> #!/usr/bash</label><br><label><input type="radio" name="q15" value="#!/bin/bash"> #!/bin/bash</label><br><label><input type="radio" name="q15" value="#!/bin/sh"> #!/bin/sh</label><br></div>
+<div class="question"><p><strong>16. Which command runs a script in current shell?</strong></p><label><input type="radio" name="q16" value="source script.sh"> source script.sh</label><br><label><input type="radio" name="q16" value="run script.sh"> run script.sh</label><br><label><input type="radio" name="q16" value="bash -s"> bash -s</label><br></div>
+<div class="question"><p><strong>17. What is $1 in shell scripting?</strong></p><label><input type="radio" name="q17" value="Line number"> Line number</label><br><label><input type="radio" name="q17" value="First variable"> First variable</label><br><label><input type="radio" name="q17" value="First argument"> First argument</label><br></div>
+<div class="question"><p><strong>18. Which symbol is used for variables?</strong></p><label><input type="radio" name="q18" value="$"> $</label><br><label><input type="radio" name="q18" value="%"> %</label><br><label><input type="radio" name="q18" value="#"> #</label><br></div>
+<div class="question"><p><strong>19. What does '&&' mean in shell?</strong></p><label><input type="radio" name="q19" value="Run parallel"> Run parallel</label><br><label><input type="radio" name="q19" value="Ignore errors"> Ignore errors</label><br><label><input type="radio" name="q19" value="Run next if previous succeeded"> Run next if previous succeeded</label><br></div>
+<div class="question"><p><strong>20. What does '||' mean in shell?</strong></p><label><input type="radio" name="q20" value="Break loop"> Break loop</label><br><label><input type="radio" name="q20" value="Background process"> Background process</label><br><label><input type="radio" name="q20" value="Run next if previous failed"> Run next if previous failed</label><br></div>
+<div class="question"><p><strong>21. Which loop repeats until condition false?</strong></p><label><input type="radio" name="q21" value="for"> for</label><br><label><input type="radio" name="q21" value="if"> if</label><br><label><input type="radio" name="q21" value="while"> while</label><br></div>
+<div class="question"><p><strong>22. Which command executes script every boot?</strong></p><label><input type="radio" name="q22" value="systemd timer or rc.local"> systemd timer or rc.local</label><br><label><input type="radio" name="q22" value="init -s"> init -s</label><br><label><input type="radio" name="q22" value="crontab @reboot"> crontab @reboot</label><br></div>
+<div class="question"><p><strong>23. Which Ansible file holds tasks?</strong></p><label><input type="radio" name="q23" value="ansible.ini"> ansible.ini</label><br><label><input type="radio" name="q23" value="tasks.conf"> tasks.conf</label><br><label><input type="radio" name="q23" value="playbook.yml"> playbook.yml</label><br></div>
+<div class="question"><p><strong>24. What is a playbook in Ansible?</strong></p><label><input type="radio" name="q24" value="Log file"> Log file</label><br><label><input type="radio" name="q24" value="YAML file with tasks"> YAML file with tasks</label><br><label><input type="radio" name="q24" value="Module library"> Module library</label><br></div>
+<div class="question"><p><strong>25. Which module installs packages in Ansible?</strong></p><label><input type="radio" name="q25" value="yum"> yum</label><br><label><input type="radio" name="q25" value="package"> package</label><br><label><input type="radio" name="q25" value="rpm"> rpm</label><br></div>
+<div class="question"><p><strong>26. How do you run playbook in Ansible?</strong></p><label><input type="radio" name="q26" value="ansible-exec"> ansible-exec</label><br><label><input type="radio" name="q26" value="ansible-run"> ansible-run</label><br><label><input type="radio" name="q26" value="ansible-playbook file.yml"> ansible-playbook file.yml</label><br></div>
+<div class="question"><p><strong>27. What command checks playbook syntax?</strong></p><label><input type="radio" name="q27" value="ansible -v"> ansible -v</label><br><label><input type="radio" name="q27" value="ansible-playbook --syntax-check"> ansible-playbook --syntax-check</label><br><label><input type="radio" name="q27" value="ansible-check"> ansible-check</label><br></div>
+<div class="question"><p><strong>28. What is 'expect' used for?</strong></p><label><input type="radio" name="q28" value="Automate interactive input"> Automate interactive input</label><br><label><input type="radio" name="q28" value="Send emails"> Send emails</label><br><label><input type="radio" name="q28" value="Log errors"> Log errors</label><br></div>
+<div class="question"><p><strong>29. Which symbol denotes background process?</strong></p><label><input type="radio" name="q29" value="|"> |</label><br><label><input type="radio" name="q29" value="&"> &</label><br><label><input type="radio" name="q29" value="!"> !</label><br></div>
+<div class="question"><p><strong>30. Which utility tests scripts without running?</strong></p><label><input type="radio" name="q30" value="bash-test"> bash-test</label><br><label><input type="radio" name="q30" value="lintsh"> lintsh</label><br><label><input type="radio" name="q30" value="shellcheck"> shellcheck</label><br></div>
+<div class="question"><p><strong>31. What does 'set -x' do in script?</strong></p><label><input type="radio" name="q31" value="Clears memory"> Clears memory</label><br><label><input type="radio" name="q31" value="Prints each command before executing"> Prints each command before executing</label><br><label><input type="radio" name="q31" value="Exits on error"> Exits on error</label><br></div>
+<div class="question"><p><strong>32. How to define a function in bash?</strong></p><label><input type="radio" name="q32" value="bashfn"> bashfn</label><br><label><input type="radio" name="q32" value="function name() { ... }"> function name() { ... }</label><br><label><input type="radio" name="q32" value="def name()"> def name()</label><br></div>
+<div class="question"><p><strong>33. How to pass environment variable to script?</strong></p><label><input type="radio" name="q33" value="setenv"> setenv</label><br><label><input type="radio" name="q33" value="VAR=value ./script.sh"> VAR=value ./script.sh</label><br><label><input type="radio" name="q33" value="env set VAR ./script.sh"> env set VAR ./script.sh</label><br></div>
+<div class="question"><p><strong>34. Which tool creates automated SSH access?</strong></p><label><input type="radio" name="q34" value="ssh-login"> ssh-login</label><br><label><input type="radio" name="q34" value="scp-key"> scp-key</label><br><label><input type="radio" name="q34" value="ssh-copy-id"> ssh-copy-id</label><br></div>
+<div class="question"><p><strong>35. Which variable stores return code of last command?</strong></p><label><input type="radio" name="q35" value="$0"> $0</label><br><label><input type="radio" name="q35" value="$?"> $?</label><br><label><input type="radio" name="q35" value="$!"> $!</label><br></div>
+<div class="question"><p><strong>36. Which scheduling tool replaces cron in systemd?</strong></p><label><input type="radio" name="q36" value="taskctl"> taskctl</label><br><label><input type="radio" name="q36" value="jobs"> jobs</label><br><label><input type="radio" name="q36" value="systemd timers"> systemd timers</label><br></div>
+<div class="question"><p><strong>37. How to view active systemd timers?</strong></p><label><input type="radio" name="q37" value="systemctl list-timers"> systemctl list-timers</label><br><label><input type="radio" name="q37" value="timerctl list"> timerctl list</label><br><label><input type="radio" name="q37" value="showtimers"> showtimers</label><br></div>
+<div class="question"><p><strong>38. What does '@reboot' mean in crontab?</strong></p><label><input type="radio" name="q38" value="Run on shutdown"> Run on shutdown</label><br><label><input type="radio" name="q38" value="Run every 24 hours"> Run every 24 hours</label><br><label><input type="radio" name="q38" value="Run job once at startup"> Run job once at startup</label><br></div>
+<div class="question"><p><strong>39. Which keyword is used for conditional branching?</strong></p><label><input type="radio" name="q39" value="select"> select</label><br><label><input type="radio" name="q39" value="if"> if</label><br><label><input type="radio" name="q39" value="loop"> loop</label><br></div>
+
+<button type="button" onclick="checkAnswers()">Submit</button>
+<div id="result" class="result"></div>
+</form>
+<script>
+const answers = {'q1': 'Ansible', 'q2': 'cron', 'q3': 'at', 'q4': 'crontab -l', 'q5': '/etc/crontab', 'q6': 'Every time unit', 'q7': '5th', 'q8': 'crontab -e', 'q9': 'crontab -u user -l', 'q10': 'atq', 'q11': '/var/log/cron', 'q12': 'Waits 5 seconds', 'q13': 'chmod +x', 'q14': '.sh', 'q15': '#!/bin/bash', 'q16': 'source script.sh', 'q17': 'First argument', 'q18': '$', 'q19': 'Run next if previous succeeded', 'q20': 'Run next if previous failed', 'q21': 'while', 'q22': 'systemd timer or rc.local', 'q23': 'playbook.yml', 'q24': 'YAML file with tasks', 'q25': 'yum', 'q26': 'ansible-playbook file.yml', 'q27': 'ansible-playbook --syntax-check', 'q28': 'Automate interactive input', 'q29': '&', 'q30': 'shellcheck', 'q31': 'Prints each command before executing', 'q32': 'function name() { ... }', 'q33': 'VAR=value ./script.sh', 'q34': 'ssh-copy-id', 'q35': '$?', 'q36': 'systemd timers', 'q37': 'systemctl list-timers', 'q38': 'Run job once at startup', 'q39': 'if'};
+function checkAnswers() {
+    let score = 0;
+    let total = Object.keys(answers).length;
+    let resultHTML = "";
+    for (const [key, value] of Object.entries(answers)) {
+        const selected = document.querySelector(`input[name="${key}"]:checked`);
+        if (selected && selected.value === value) {
+            score++;
+            resultHTML += `<p style='color:green;'>Question ${key.substring(1)}: Correct</p>`;
+        } else {
+            resultHTML += `<p style='color:red;'>Question ${key.substring(1)}: Wrong (Correct: ${value})</p>`;
+        }
+    }
+    document.getElementById("result").innerHTML = `<h3>You scored ${score} out of ${total}</h3>` + resultHTML;
+}
+</script>
+</body>
+</html>

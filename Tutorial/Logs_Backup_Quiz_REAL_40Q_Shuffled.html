@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Linux Logs, Backup & Restore Quiz</title>
+<style>
+    body { font-family: Arial, sans-serif; padding: 20px; background-color: #eef; }
+    .question { margin-bottom: 20px; background: #fff; padding: 10px 15px; border-radius: 5px; }
+    .result { margin-top: 20px; font-weight: bold; }
+</style>
+</head>
+<body>
+<h1>Logs, Backup & Restore Quiz (40 Questions - Shuffled)</h1>
+<form id="quizForm">
+<div class="question"><p><strong>1. Which file contains system log messages?</strong></p><label><input type="radio" name="q1" value="/etc/messages"> /etc/messages</label><br><label><input type="radio" name="q1" value="/log/system"> /log/system</label><br><label><input type="radio" name="q1" value="/var/log/messages"> /var/log/messages</label><br></div>
+<div class="question"><p><strong>2. Which command views last few lines of a file?</strong></p><label><input type="radio" name="q2" value="tail"> tail</label><br><label><input type="radio" name="q2" value="grep"> grep</label><br><label><input type="radio" name="q2" value="less"> less</label><br></div>
+<div class="question"><p><strong>3. Which command follows a growing log file?</strong></p><label><input type="radio" name="q3" value="cat -f"> cat -f</label><br><label><input type="radio" name="q3" value="tail -f"> tail -f</label><br><label><input type="radio" name="q3" value="watch"> watch</label><br></div>
+<div class="question"><p><strong>4. Which log file contains authentication logs?</strong></p><label><input type="radio" name="q4" value="/var/log/login"> /var/log/login</label><br><label><input type="radio" name="q4" value="/var/log/auth.log"> /var/log/auth.log</label><br><label><input type="radio" name="q4" value="/var/log/secure"> /var/log/secure</label><br></div>
+<div class="question"><p><strong>5. Which command reads binary log files?</strong></p><label><input type="radio" name="q5" value="syslog"> syslog</label><br><label><input type="radio" name="q5" value="journalctl"> journalctl</label><br><label><input type="radio" name="q5" value="logread"> logread</label><br></div>
+<div class="question"><p><strong>6. What is the default log manager in RHEL 8?</strong></p><label><input type="radio" name="q6" value="rsyslog"> rsyslog</label><br><label><input type="radio" name="q6" value="syslogd"> syslogd</label><br><label><input type="radio" name="q6" value="journald"> journald</label><br></div>
+<div class="question"><p><strong>7. Which command clears journal logs?</strong></p><label><input type="radio" name="q7" value="journalctl --vacuum-time"> journalctl --vacuum-time</label><br><label><input type="radio" name="q7" value="logclear"> logclear</label><br><label><input type="radio" name="q7" value="journald-clean"> journald-clean</label><br></div>
+<div class="question"><p><strong>8. Which command shows last login of users?</strong></p><label><input type="radio" name="q8" value="last"> last</label><br><label><input type="radio" name="q8" value="who"> who</label><br><label><input type="radio" name="q8" value="loginlog"> loginlog</label><br></div>
+<div class="question"><p><strong>9. Which file logs cron job output?</strong></p><label><input type="radio" name="q9" value="/cron/output.log"> /cron/output.log</label><br><label><input type="radio" name="q9" value="/etc/cron.log"> /etc/cron.log</label><br><label><input type="radio" name="q9" value="/var/log/cron"> /var/log/cron</label><br></div>
+<div class="question"><p><strong>10. Which directory stores system logs?</strong></p><label><input type="radio" name="q10" value="/usr/logs"> /usr/logs</label><br><label><input type="radio" name="q10" value="/var/log"> /var/log</label><br><label><input type="radio" name="q10" value="/etc/logs"> /etc/logs</label><br></div>
+<div class="question"><p><strong>11. Which log file records system boots?</strong></p><label><input type="radio" name="q11" value="/var/log/boot"> /var/log/boot</label><br><label><input type="radio" name="q11" value="/etc/bootlog"> /etc/bootlog</label><br><label><input type="radio" name="q11" value="/var/log/wtmp"> /var/log/wtmp</label><br></div>
+<div class="question"><p><strong>12. Which command shows disk usage of logs?</strong></p><label><input type="radio" name="q12" value="logsize"> logsize</label><br><label><input type="radio" name="q12" value="du -sh /var/log"> du -sh /var/log</label><br><label><input type="radio" name="q12" value="df -l /var/log"> df -l /var/log</label><br></div>
+<div class="question"><p><strong>13. Which command archives files?</strong></p><label><input type="radio" name="q13" value="zip"> zip</label><br><label><input type="radio" name="q13" value="gzip"> gzip</label><br><label><input type="radio" name="q13" value="tar"> tar</label><br></div>
+<div class="question"><p><strong>14. What option compresses tar file?</strong></p><label><input type="radio" name="q14" value="-c"> -c</label><br><label><input type="radio" name="q14" value="-j"> -j</label><br><label><input type="radio" name="q14" value="-z"> -z</label><br></div>
+<div class="question"><p><strong>15. What does 'tar -czf' do?</strong></p><label><input type="radio" name="q15" value="Create compressed archive"> Create compressed archive</label><br><label><input type="radio" name="q15" value="Copy folder"> Copy folder</label><br><label><input type="radio" name="q15" value="Extract archive"> Extract archive</label><br></div>
+<div class="question"><p><strong>16. Which command extracts a tar.gz file?</strong></p><label><input type="radio" name="q16" value="tar -xzf"> tar -xzf</label><br><label><input type="radio" name="q16" value="extract"> extract</label><br><label><input type="radio" name="q16" value="unzip"> unzip</label><br></div>
+<div class="question"><p><strong>17. What command creates a backup in rsync?</strong></p><label><input type="radio" name="q17" value="copy -r"> copy -r</label><br><label><input type="radio" name="q17" value="sync-backup"> sync-backup</label><br><label><input type="radio" name="q17" value="rsync -av"> rsync -av</label><br></div>
+<div class="question"><p><strong>18. Which rsync flag preserves permissions?</strong></p><label><input type="radio" name="q18" value="-v"> -v</label><br><label><input type="radio" name="q18" value="-a"> -a</label><br><label><input type="radio" name="q18" value="-p"> -p</label><br></div>
+<div class="question"><p><strong>19. How to backup all files including hidden?</strong></p><label><input type="radio" name="q19" value="tar -czf backup.tgz .* *"> tar -czf backup.tgz .* *</label><br><label><input type="radio" name="q19" value="tar all"> tar all</label><br><label><input type="radio" name="q19" value="tar -a"> tar -a</label><br></div>
+<div class="question"><p><strong>20. Which command creates incremental backups?</strong></p><label><input type="radio" name="q20" value="cp -r"> cp -r</label><br><label><input type="radio" name="q20" value="rsync"> rsync</label><br><label><input type="radio" name="q20" value="tar"> tar</label><br></div>
+<div class="question"><p><strong>21. Which command backs up MBR?</strong></p><label><input type="radio" name="q21" value="mbrbackup"> mbrbackup</label><br><label><input type="radio" name="q21" value="grub-save"> grub-save</label><br><label><input type="radio" name="q21" value="dd if=/dev/sda of=mbr.img bs=512 count=1"> dd if=/dev/sda of=mbr.img bs=512 count=1</label><br></div>
+<div class="question"><p><strong>22. Which command restores MBR?</strong></p><label><input type="radio" name="q22" value="dd if=mbr.img of=/dev/sda"> dd if=mbr.img of=/dev/sda</label><br><label><input type="radio" name="q22" value="mbrrestore"> mbrrestore</label><br><label><input type="radio" name="q22" value="grub-restore"> grub-restore</label><br></div>
+<div class="question"><p><strong>23. What is full backup?</strong></p><label><input type="radio" name="q23" value="Backup of all data"> Backup of all data</label><br><label><input type="radio" name="q23" value="Partial backup"> Partial backup</label><br><label><input type="radio" name="q23" value="Logs only"> Logs only</label><br></div>
+<div class="question"><p><strong>24. What is incremental backup?</strong></p><label><input type="radio" name="q24" value="Full data"> Full data</label><br><label><input type="radio" name="q24" value="Only changed files"> Only changed files</label><br><label><input type="radio" name="q24" value="Differential backup"> Differential backup</label><br></div>
+<div class="question"><p><strong>25. Which tool is used to automate backups?</strong></p><label><input type="radio" name="q25" value="awk"> awk</label><br><label><input type="radio" name="q25" value="grep"> grep</label><br><label><input type="radio" name="q25" value="cron"> cron</label><br></div>
+<div class="question"><p><strong>26. Which tool is CLI-based for backup?</strong></p><label><input type="radio" name="q26" value="gparted"> gparted</label><br><label><input type="radio" name="q26" value="rsync"> rsync</label><br><label><input type="radio" name="q26" value="nano"> nano</label><br></div>
+<div class="question"><p><strong>27. Which file lists rsyslog config?</strong></p><label><input type="radio" name="q27" value="/etc/log.conf"> /etc/log.conf</label><br><label><input type="radio" name="q27" value="/var/rsyslog.conf"> /var/rsyslog.conf</label><br><label><input type="radio" name="q27" value="/etc/rsyslog.conf"> /etc/rsyslog.conf</label><br></div>
+<div class="question"><p><strong>28. Which symbol in rsyslog config means all logs?</strong></p><label><input type="radio" name="q28" value="log.*"> log.*</label><br><label><input type="radio" name="q28" value="*.*"> *.*</label><br><label><input type="radio" name="q28" value="all.all"> all.all</label><br></div>
+<div class="question"><p><strong>29. Which command shows failed login attempts?</strong></p><label><input type="radio" name="q29" value="badlogin"> badlogin</label><br><label><input type="radio" name="q29" value="authcheck"> authcheck</label><br><label><input type="radio" name="q29" value="faillog"> faillog</label><br></div>
+<div class="question"><p><strong>30. Which command searches logs for a keyword?</strong></p><label><input type="radio" name="q30" value="find"> find</label><br><label><input type="radio" name="q30" value="echo"> echo</label><br><label><input type="radio" name="q30" value="grep"> grep</label><br></div>
+<div class="question"><p><strong>31. Which option deletes journal logs older than X?</strong></p><label><input type="radio" name="q31" value="logrm"> logrm</label><br><label><input type="radio" name="q31" value="journalctl --vacuum-time=1d"> journalctl --vacuum-time=1d</label><br><label><input type="radio" name="q31" value="rm -log"> rm -log</label><br></div>
+<div class="question"><p><strong>32. What is the purpose of logrotate?</strong></p><label><input type="radio" name="q32" value="Backups logs"> Backups logs</label><br><label><input type="radio" name="q32" value="Deletes logs"> Deletes logs</label><br><label><input type="radio" name="q32" value="Manages log file sizes"> Manages log file sizes</label><br></div>
+<div class="question"><p><strong>33. Which file configures logrotate?</strong></p><label><input type="radio" name="q33" value="/log/rotate.conf"> /log/rotate.conf</label><br><label><input type="radio" name="q33" value="/etc/syslogs"> /etc/syslogs</label><br><label><input type="radio" name="q33" value="/etc/logrotate.conf"> /etc/logrotate.conf</label><br></div>
+<div class="question"><p><strong>34. Which tool sends logs to remote server?</strong></p><label><input type="radio" name="q34" value="scp"> scp</label><br><label><input type="radio" name="q34" value="rsyslog"> rsyslog</label><br><label><input type="radio" name="q34" value="ssh"> ssh</label><br></div>
+<div class="question"><p><strong>35. Which command shows entire journal?</strong></p><label><input type="radio" name="q35" value="journalctl"> journalctl</label><br><label><input type="radio" name="q35" value="syslogd"> syslogd</label><br><label><input type="radio" name="q35" value="dmesg"> dmesg</label><br></div>
+<div class="question"><p><strong>36. Which command views kernel ring buffer?</strong></p><label><input type="radio" name="q36" value="journalctl -k"> journalctl -k</label><br><label><input type="radio" name="q36" value="dmesg"> dmesg</label><br><label><input type="radio" name="q36" value="kernlog"> kernlog</label><br></div>
+<div class="question"><p><strong>37. Which directory stores rotated logs?</strong></p><label><input type="radio" name="q37" value="/log/old"> /log/old</label><br><label><input type="radio" name="q37" value="/var/log"> /var/log</label><br><label><input type="radio" name="q37" value="/var/oldlogs"> /var/oldlogs</label><br></div>
+<div class="question"><p><strong>38. Which compression is used with tar?</strong></p><label><input type="radio" name="q38" value="bzip"> bzip</label><br><label><input type="radio" name="q38" value="lzma"> lzma</label><br><label><input type="radio" name="q38" value="gzip"> gzip</label><br></div>
+<div class="question"><p><strong>39. Which command shows summary of logins?</strong></p><label><input type="radio" name="q39" value="utmp"> utmp</label><br><label><input type="radio" name="q39" value="wtmp"> wtmp</label><br><label><input type="radio" name="q39" value="lastlog"> lastlog</label><br></div>
+<div class="question"><p><strong>40. Which file contains list of last users logged in?</strong></p><label><input type="radio" name="q40" value="/etc/logins"> /etc/logins</label><br><label><input type="radio" name="q40" value="/var/log/lastlog"> /var/log/lastlog</label><br><label><input type="radio" name="q40" value="/var/log/wtmp"> /var/log/wtmp</label><br></div>
+
+<button type="button" onclick="checkAnswers()">Submit</button>
+<div id="result" class="result"></div>
+</form>
+<script>
+const answers = {'q1': '/var/log/messages', 'q2': 'tail', 'q3': 'tail -f', 'q4': '/var/log/secure', 'q5': 'journalctl', 'q6': 'journald', 'q7': 'journalctl --vacuum-time', 'q8': 'last', 'q9': '/var/log/cron', 'q10': '/var/log', 'q11': '/var/log/wtmp', 'q12': 'du -sh /var/log', 'q13': 'tar', 'q14': '-z', 'q15': 'Create compressed archive', 'q16': 'tar -xzf', 'q17': 'rsync -av', 'q18': '-a', 'q19': 'tar -czf backup.tgz .* *', 'q20': 'rsync', 'q21': 'dd if=/dev/sda of=mbr.img bs=512 count=1', 'q22': 'dd if=mbr.img of=/dev/sda', 'q23': 'Backup of all data', 'q24': 'Only changed files', 'q25': 'cron', 'q26': 'rsync', 'q27': '/etc/rsyslog.conf', 'q28': '*.*', 'q29': 'faillog', 'q30': 'grep', 'q31': 'journalctl --vacuum-time=1d', 'q32': 'Manages log file sizes', 'q33': '/etc/logrotate.conf', 'q34': 'rsyslog', 'q35': 'journalctl', 'q36': 'dmesg', 'q37': '/var/log', 'q38': 'gzip', 'q39': 'lastlog', 'q40': '/var/log/wtmp'};
+function checkAnswers() {
+    let score = 0;
+    let total = Object.keys(answers).length;
+    let resultHTML = "";
+    for (const [key, value] of Object.entries(answers)) {
+        const selected = document.querySelector(`input[name="${key}"]:checked`);
+        if (selected && selected.value === value) {
+            score++;
+            resultHTML += `<p style='color:green;'>Question ${key.substring(1)}: Correct</p>`;
+        } else {
+            resultHTML += `<p style='color:red;'>Question ${key.substring(1)}: Wrong (Correct: ${value})</p>`;
+        }
+    }
+    document.getElementById("result").innerHTML = `<h3>You scored ${score} out of ${total}</h3>` + resultHTML;
+}
+</script>
+</body>
+</html>

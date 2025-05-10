@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Linux Networking Tools Quiz</title>
+<style>
+    body { font-family: Arial, sans-serif; padding: 20px; background-color: #eef; }
+    .question { margin-bottom: 20px; background: #fff; padding: 10px 15px; border-radius: 5px; }
+    .result { margin-top: 20px; font-weight: bold; }
+</style>
+</head>
+<body>
+<h1>Linux Networking Tools Quiz (40 Questions - Shuffled)</h1>
+<form id="quizForm">
+<div class="question"><p><strong>1. Which command checks network connectivity?</strong></p><label><input type="radio" name="q1" value="ping"> ping</label><br><label><input type="radio" name="q1" value="traceroute"> traceroute</label><br><label><input type="radio" name="q1" value="dig"> dig</label><br></div>
+<div class="question"><p><strong>2. Which protocol does ping use?</strong></p><label><input type="radio" name="q2" value="ICMP"> ICMP</label><br><label><input type="radio" name="q2" value="UDP"> UDP</label><br><label><input type="radio" name="q2" value="TCP"> TCP</label><br></div>
+<div class="question"><p><strong>3. Which tool shows routing table?</strong></p><label><input type="radio" name="q3" value="ss -r"> ss -r</label><br><label><input type="radio" name="q3" value="netstat -r"> netstat -r</label><br><label><input type="radio" name="q3" value="ip show routes"> ip show routes</label><br></div>
+<div class="question"><p><strong>4. Which command displays open ports and sockets?</strong></p><label><input type="radio" name="q4" value="portlist"> portlist</label><br><label><input type="radio" name="q4" value="ss -tuln"> ss -tuln</label><br><label><input type="radio" name="q4" value="netstat -open"> netstat -open</label><br></div>
+<div class="question"><p><strong>5. Which command traces path to destination?</strong></p><label><input type="radio" name="q5" value="tracepath"> tracepath</label><br><label><input type="radio" name="q5" value="traceroute"> traceroute</label><br><label><input type="radio" name="q5" value="pathfind"> pathfind</label><br></div>
+<div class="question"><p><strong>6. Which port is used by FTP?</strong></p><label><input type="radio" name="q6" value="22"> 22</label><br><label><input type="radio" name="q6" value="20"> 20</label><br><label><input type="radio" name="q6" value="21"> 21</label><br></div>
+<div class="question"><p><strong>7. Which command gets DNS records?</strong></p><label><input type="radio" name="q7" value="dig"> dig</label><br><label><input type="radio" name="q7" value="nslookup"> nslookup</label><br><label><input type="radio" name="q7" value="host"> host</label><br></div>
+<div class="question"><p><strong>8. Which tool performs DNS lookups?</strong></p><label><input type="radio" name="q8" value="pingdns"> pingdns</label><br><label><input type="radio" name="q8" value="resolv"> resolv</label><br><label><input type="radio" name="q8" value="nslookup"> nslookup</label><br></div>
+<div class="question"><p><strong>9. Which command tests port connectivity?</strong></p><label><input type="radio" name="q9" value="ss"> ss</label><br><label><input type="radio" name="q9" value="telnet"> telnet</label><br><label><input type="radio" name="q9" value="netcat"> netcat</label><br></div>
+<div class="question"><p><strong>10. What does 'netstat -a' show?</strong></p><label><input type="radio" name="q10" value="All connections and listening ports"> All connections and listening ports</label><br><label><input type="radio" name="q10" value="ARP cache"> ARP cache</label><br><label><input type="radio" name="q10" value="Active IPs"> Active IPs</label><br></div>
+<div class="question"><p><strong>11. Which command displays ARP table?</strong></p><label><input type="radio" name="q11" value="arp -a"> arp -a</label><br><label><input type="radio" name="q11" value="arpview"> arpview</label><br><label><input type="radio" name="q11" value="net-arp"> net-arp</label><br></div>
+<div class="question"><p><strong>12. Which command pings IPv6?</strong></p><label><input type="radio" name="q12" value="ping6"> ping6</label><br><label><input type="radio" name="q12" value="netping6"> netping6</label><br><label><input type="radio" name="q12" value="ipv6ping"> ipv6ping</label><br></div>
+<div class="question"><p><strong>13. Which tool sends custom TCP/UDP packets?</strong></p><label><input type="radio" name="q13" value="nmap"> nmap</label><br><label><input type="radio" name="q13" value="tcpdump"> tcpdump</label><br><label><input type="radio" name="q13" value="hping3"> hping3</label><br></div>
+<div class="question"><p><strong>14. What does 'nmap -sS' perform?</strong></p><label><input type="radio" name="q14" value="Full TCP connect"> Full TCP connect</label><br><label><input type="radio" name="q14" value="SYN scan"> SYN scan</label><br><label><input type="radio" name="q14" value="Stealth UDP"> Stealth UDP</label><br></div>
+<div class="question"><p><strong>15. What is 'tcpdump' used for?</strong></p><label><input type="radio" name="q15" value="Packet capture"> Packet capture</label><br><label><input type="radio" name="q15" value="Port scan"> Port scan</label><br><label><input type="radio" name="q15" value="Bandwidth check"> Bandwidth check</label><br></div>
+<div class="question"><p><strong>16. Which file lists known hosts?</strong></p><label><input type="radio" name="q16" value="/etc/hostname"> /etc/hostname</label><br><label><input type="radio" name="q16" value="/etc/network"> /etc/network</label><br><label><input type="radio" name="q16" value="/etc/hosts"> /etc/hosts</label><br></div>
+<div class="question"><p><strong>17. Which command tests name resolution?</strong></p><label><input type="radio" name="q17" value="dnscheck"> dnscheck</label><br><label><input type="radio" name="q17" value="resolve"> resolve</label><br><label><input type="radio" name="q17" value="host"> host</label><br></div>
+<div class="question"><p><strong>18. Which command displays IP address?</strong></p><label><input type="radio" name="q18" value="ip a"> ip a</label><br><label><input type="radio" name="q18" value="ipconfig"> ipconfig</label><br><label><input type="radio" name="q18" value="ifup"> ifup</label><br></div>
+<div class="question"><p><strong>19. What does 'ip route show' do?</strong></p><label><input type="radio" name="q19" value="DNS settings"> DNS settings</label><br><label><input type="radio" name="q19" value="Interfaces list"> Interfaces list</label><br><label><input type="radio" name="q19" value="Shows routing table"> Shows routing table</label><br></div>
+<div class="question"><p><strong>20. Which command adds a static route?</strong></p><label><input type="radio" name="q20" value="route static"> route static</label><br><label><input type="radio" name="q20" value="ip route add"> ip route add</label><br><label><input type="radio" name="q20" value="addroute"> addroute</label><br></div>
+<div class="question"><p><strong>21. What is loopback IP address?</strong></p><label><input type="radio" name="q21" value="192.168.0.1"> 192.168.0.1</label><br><label><input type="radio" name="q21" value="10.0.0.1"> 10.0.0.1</label><br><label><input type="radio" name="q21" value="127.0.0.1"> 127.0.0.1</label><br></div>
+<div class="question"><p><strong>22. Which command checks hostname resolution?</strong></p><label><input type="radio" name="q22" value="hostcheck"> hostcheck</label><br><label><input type="radio" name="q22" value="dnslookup"> dnslookup</label><br><label><input type="radio" name="q22" value="getent hosts"> getent hosts</label><br></div>
+<div class="question"><p><strong>23. Which file contains DNS server addresses?</strong></p><label><input type="radio" name="q23" value="/etc/resolv.conf"> /etc/resolv.conf</label><br><label><input type="radio" name="q23" value="/etc/dns.conf"> /etc/dns.conf</label><br><label><input type="radio" name="q23" value="/etc/named.conf"> /etc/named.conf</label><br></div>
+<div class="question"><p><strong>24. Which command shows interface statistics?</strong></p><label><input type="radio" name="q24" value="nettop"> nettop</label><br><label><input type="radio" name="q24" value="ip -s link"> ip -s link</label><br><label><input type="radio" name="q24" value="ifstat"> ifstat</label><br></div>
+<div class="question"><p><strong>25. Which command shows traffic in/out per process?</strong></p><label><input type="radio" name="q25" value="trafmon"> trafmon</label><br><label><input type="radio" name="q25" value="nethogs"> nethogs</label><br><label><input type="radio" name="q25" value="tcpdump"> tcpdump</label><br></div>
+<div class="question"><p><strong>26. Which command resolves hostnames?</strong></p><label><input type="radio" name="q26" value="dns-show"> dns-show</label><br><label><input type="radio" name="q26" value="getent hosts"> getent hosts</label><br><label><input type="radio" name="q26" value="ns-check"> ns-check</label><br></div>
+<div class="question"><p><strong>27. Which command sends HTTP request via CLI?</strong></p><label><input type="radio" name="q27" value="wget"> wget</label><br><label><input type="radio" name="q27" value="curl"> curl</label><br><label><input type="radio" name="q27" value="httpget"> httpget</label><br></div>
+<div class="question"><p><strong>28. What does 'wget' do?</strong></p><label><input type="radio" name="q28" value="Downloads files from URL"> Downloads files from URL</label><br><label><input type="radio" name="q28" value="Monitors bandwidth"> Monitors bandwidth</label><br><label><input type="radio" name="q28" value="Logs HTTP"> Logs HTTP</label><br></div>
+<div class="question"><p><strong>29. Which command detects default gateway?</strong></p><label><input type="radio" name="q29" value="netinfo"> netinfo</label><br><label><input type="radio" name="q29" value="ip route | grep default"> ip route | grep default</label><br><label><input type="radio" name="q29" value="route default"> route default</label><br></div>
+<div class="question"><p><strong>30. What tool checks TCP/UDP connections?</strong></p><label><input type="radio" name="q30" value="sockinfo"> sockinfo</label><br><label><input type="radio" name="q30" value="connects"> connects</label><br><label><input type="radio" name="q30" value="netstat"> netstat</label><br></div>
+<div class="question"><p><strong>31. Which tool is used for fast scanning?</strong></p><label><input type="radio" name="q31" value="fscan"> fscan</label><br><label><input type="radio" name="q31" value="nmap"> nmap</label><br><label><input type="radio" name="q31" value="nscan"> nscan</label><br></div>
+<div class="question"><p><strong>32. Which tool lists services and ports?</strong></p><label><input type="radio" name="q32" value="netport"> netport</label><br><label><input type="radio" name="q32" value="ss"> ss</label><br><label><input type="radio" name="q32" value="portstat"> portstat</label><br></div>
+<div class="question"><p><strong>33. Which tool monitors interface bandwidth?</strong></p><label><input type="radio" name="q33" value="iftop"> iftop</label><br><label><input type="radio" name="q33" value="tcpdump"> tcpdump</label><br><label><input type="radio" name="q33" value="nload"> nload</label><br></div>
+<div class="question"><p><strong>34. Which command shows NIC details?</strong></p><label><input type="radio" name="q34" value="ifinfo"> ifinfo</label><br><label><input type="radio" name="q34" value="nicstat"> nicstat</label><br><label><input type="radio" name="q34" value="ethtool"> ethtool</label><br></div>
+<div class="question"><p><strong>35. Which file stores network interface settings?</strong></p><label><input type="radio" name="q35" value="/etc/net"> /etc/net</label><br><label><input type="radio" name="q35" value="/etc/sysconfig/network-scripts/"> /etc/sysconfig/network-scripts/</label><br><label><input type="radio" name="q35" value="/etc/ifaces"> /etc/ifaces</label><br></div>
+<div class="question"><p><strong>36. What does 'ip link set eth0 up' do?</strong></p><label><input type="radio" name="q36" value="Shows interface"> Shows interface</label><br><label><input type="radio" name="q36" value="Disables interface"> Disables interface</label><br><label><input type="radio" name="q36" value="Enables interface"> Enables interface</label><br></div>
+<div class="question"><p><strong>37. Which tool configures NIC interactively?</strong></p><label><input type="radio" name="q37" value="nmtui"> nmtui</label><br><label><input type="radio" name="q37" value="ifconfig-gui"> ifconfig-gui</label><br><label><input type="radio" name="q37" value="netwizard"> netwizard</label><br></div>
+<div class="question"><p><strong>38. Which file configures hostname?</strong></p><label><input type="radio" name="q38" value="/etc/network/hostname"> /etc/network/hostname</label><br><label><input type="radio" name="q38" value="/etc/hostsname"> /etc/hostsname</label><br><label><input type="radio" name="q38" value="/etc/hostname"> /etc/hostname</label><br></div>
+<div class="question"><p><strong>39. Which command resets NIC?</strong></p><label><input type="radio" name="q39" value="ifdown eth0 && ifup eth0"> ifdown eth0 && ifup eth0</label><br><label><input type="radio" name="q39" value="ip link cycle"> ip link cycle</label><br><label><input type="radio" name="q39" value="nicreset"> nicreset</label><br></div>
+
+<button type="button" onclick="checkAnswers()">Submit</button>
+<div id="result" class="result"></div>
+</form>
+<script>
+const answers = {'q1': 'ping', 'q2': 'ICMP', 'q3': 'netstat -r', 'q4': 'ss -tuln', 'q5': 'traceroute', 'q6': '21', 'q7': 'dig', 'q8': 'nslookup', 'q9': 'telnet', 'q10': 'All connections and listening ports', 'q11': 'arp -a', 'q12': 'ping6', 'q13': 'hping3', 'q14': 'SYN scan', 'q15': 'Packet capture', 'q16': '/etc/hosts', 'q17': 'host', 'q18': 'ip a', 'q19': 'Shows routing table', 'q20': 'ip route add', 'q21': '127.0.0.1', 'q22': 'getent hosts', 'q23': '/etc/resolv.conf', 'q24': 'ip -s link', 'q25': 'nethogs', 'q26': 'getent hosts', 'q27': 'curl', 'q28': 'Downloads files from URL', 'q29': 'ip route | grep default', 'q30': 'netstat', 'q31': 'nmap', 'q32': 'ss', 'q33': 'iftop', 'q34': 'ethtool', 'q35': '/etc/sysconfig/network-scripts/', 'q36': 'Enables interface', 'q37': 'nmtui', 'q38': '/etc/hostname', 'q39': 'ifdown eth0 && ifup eth0'};
+function checkAnswers() {
+    let score = 0;
+    let total = Object.keys(answers).length;
+    let resultHTML = "";
+    for (const [key, value] of Object.entries(answers)) {
+        const selected = document.querySelector(`input[name="${key}"]:checked`);
+        if (selected && selected.value === value) {
+            score++;
+            resultHTML += `<p style='color:green;'>Question ${key.substring(1)}: Correct</p>`;
+        } else {
+            resultHTML += `<p style='color:red;'>Question ${key.substring(1)}: Wrong (Correct: ${value})</p>`;
+        }
+    }
+    document.getElementById("result").innerHTML = `<h3>You scored ${score} out of ${total}</h3>` + resultHTML;
+}
+</script>
+</body>
+</html>

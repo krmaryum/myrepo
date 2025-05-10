@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Filesystem & Partitioning Quiz</title>
+<style>
+    body { font-family: Arial, sans-serif; padding: 20px; background-color: #eef; }
+    .question { margin-bottom: 20px; background: #fff; padding: 10px 15px; border-radius: 5px; }
+    .result { margin-top: 20px; font-weight: bold; }
+</style>
+</head>
+<body>
+<h1>Filesystem & Partitioning Quiz (40 Questions - Shuffled)</h1>
+<form id="quizForm">
+<div class="question"><p><strong>1. Which file contains information about disk partitions?</strong></p><label><input type="radio" name="q1" value="/etc/fstab"> /etc/fstab</label><br><label><input type="radio" name="q1" value="/etc/mtab"> /etc/mtab</label><br><label><input type="radio" name="q1" value="/etc/shadow"> /etc/shadow</label><br></div>
+<div class="question"><p><strong>2. Which command is used to display disk space usage?</strong></p><label><input type="radio" name="q2" value="ls -lh"> ls -lh</label><br><label><input type="radio" name="q2" value="du -sh"> du -sh</label><br><label><input type="radio" name="q2" value="df -h"> df -h</label><br></div>
+<div class="question"><p><strong>3. What command checks filesystem integrity?</strong></p><label><input type="radio" name="q3" value="verifyfs"> verifyfs</label><br><label><input type="radio" name="q3" value="fsck"> fsck</label><br><label><input type="radio" name="q3" value="checkfs"> checkfs</label><br></div>
+<div class="question"><p><strong>4. What does the 'mount' command do?</strong></p><label><input type="radio" name="q4" value="Formats partition"> Formats partition</label><br><label><input type="radio" name="q4" value="Attaches filesystem to directory"> Attaches filesystem to directory</label><br><label><input type="radio" name="q4" value="Removes drive"> Removes drive</label><br></div>
+<div class="question"><p><strong>5. Which command lists currently mounted filesystems?</strong></p><label><input type="radio" name="q5" value="df -m"> df -m</label><br><label><input type="radio" name="q5" value="lsblk -m"> lsblk -m</label><br><label><input type="radio" name="q5" value="mount"> mount</label><br></div>
+<div class="question"><p><strong>6. What is the purpose of the /etc/fstab file?</strong></p><label><input type="radio" name="q6" value="Stores disk labels"> Stores disk labels</label><br><label><input type="radio" name="q6" value="Defines mount points at boot"> Defines mount points at boot</label><br><label><input type="radio" name="q6" value="Lists all users"> Lists all users</label><br></div>
+<div class="question"><p><strong>7. How to create an ext4 filesystem?</strong></p><label><input type="radio" name="q7" value="mkfs.ext4"> mkfs.ext4</label><br><label><input type="radio" name="q7" value="format.ext4"> format.ext4</label><br><label><input type="radio" name="q7" value="mke2fs -j"> mke2fs -j</label><br></div>
+<div class="question"><p><strong>8. Which command displays inode usage?</strong></p><label><input type="radio" name="q8" value="du -i"> du -i</label><br><label><input type="radio" name="q8" value="df -i"> df -i</label><br><label><input type="radio" name="q8" value="ls -i"> ls -i</label><br></div>
+<div class="question"><p><strong>9. How to create a new partition?</strong></p><label><input type="radio" name="q9" value="fdisk /dev/sdX"> fdisk /dev/sdX</label><br><label><input type="radio" name="q9" value="newpart"> newpart</label><br><label><input type="radio" name="q9" value="mkpart /dev/sdX"> mkpart /dev/sdX</label><br></div>
+<div class="question"><p><strong>10. What command is used to label a filesystem?</strong></p><label><input type="radio" name="q10" value="fslabel"> fslabel</label><br><label><input type="radio" name="q10" value="e2label"> e2label</label><br><label><input type="radio" name="q10" value="mklabel"> mklabel</label><br></div>
+<div class="question"><p><strong>11. How to mount a partition manually?</strong></p><label><input type="radio" name="q11" value="mnt /dev/sdX1"> mnt /dev/sdX1</label><br><label><input type="radio" name="q11" value="mount /dev/sdX1 /mnt"> mount /dev/sdX1 /mnt</label><br><label><input type="radio" name="q11" value="mount -t /mnt"> mount -t /mnt</label><br></div>
+<div class="question"><p><strong>12. What command unmounts a filesystem?</strong></p><label><input type="radio" name="q12" value="umount /dev/sdX1"> umount /dev/sdX1</label><br><label><input type="radio" name="q12" value="unmount /mnt"> unmount /mnt</label><br><label><input type="radio" name="q12" value="removefs"> removefs</label><br></div>
+<div class="question"><p><strong>13. Which tool provides graphical disk partitioning?</strong></p><label><input type="radio" name="q13" value="gparted"> gparted</label><br><label><input type="radio" name="q13" value="diskgui"> diskgui</label><br><label><input type="radio" name="q13" value="parttool"> parttool</label><br></div>
+<div class="question"><p><strong>14. What is a mount point?</strong></p><label><input type="radio" name="q14" value="Directory to access mounted filesystem"> Directory to access mounted filesystem</label><br><label><input type="radio" name="q14" value="Log directory"> Log directory</label><br><label><input type="radio" name="q14" value="Backup location"> Backup location</label><br></div>
+<div class="question"><p><strong>15. How to format a partition with XFS?</strong></p><label><input type="radio" name="q15" value="mkfs.xfs"> mkfs.xfs</label><br><label><input type="radio" name="q15" value="format.xfs"> format.xfs</label><br><label><input type="radio" name="q15" value="xfs-create"> xfs-create</label><br></div>
+<div class="question"><p><strong>16. Which command reports disk usage by folder?</strong></p><label><input type="radio" name="q16" value="du -sh"> du -sh</label><br><label><input type="radio" name="q16" value="df -sh"> df -sh</label><br><label><input type="radio" name="q16" value="ls -lh"> ls -lh</label><br></div>
+<div class="question"><p><strong>17. What does 'sync' command do?</strong></p><label><input type="radio" name="q17" value="Writes buffered data to disk"> Writes buffered data to disk</label><br><label><input type="radio" name="q17" value="Mounts disk"> Mounts disk</label><br><label><input type="radio" name="q17" value="Formats partition"> Formats partition</label><br></div>
+<div class="question"><p><strong>18. Which command shows partition UUIDs?</strong></p><label><input type="radio" name="q18" value="blkid"> blkid</label><br><label><input type="radio" name="q18" value="df -u"> df -u</label><br><label><input type="radio" name="q18" value="uuidshow"> uuidshow</label><br></div>
+<div class="question"><p><strong>19. How to display partition structure visually?</strong></p><label><input type="radio" name="q19" value="fdisk -s"> fdisk -s</label><br><label><input type="radio" name="q19" value="showpart"> showpart</label><br><label><input type="radio" name="q19" value="lsblk"> lsblk</label><br></div>
+<div class="question"><p><strong>20. Which file shows current swap usage?</strong></p><label><input type="radio" name="q20" value="/etc/swap.conf"> /etc/swap.conf</label><br><label><input type="radio" name="q20" value="/proc/swaps"> /proc/swaps</label><br><label><input type="radio" name="q20" value="/etc/fstab"> /etc/fstab</label><br></div>
+<div class="question"><p><strong>21. Which file system is best for large files?</strong></p><label><input type="radio" name="q21" value="ext2"> ext2</label><br><label><input type="radio" name="q21" value="FAT32"> FAT32</label><br><label><input type="radio" name="q21" value="XFS"> XFS</label><br></div>
+<div class="question"><p><strong>22. Which file system is journaled?</strong></p><label><input type="radio" name="q22" value="vfat"> vfat</label><br><label><input type="radio" name="q22" value="ext2"> ext2</label><br><label><input type="radio" name="q22" value="ext4"> ext4</label><br></div>
+<div class="question"><p><strong>23. Which filesystem is suitable for USB drives?</strong></p><label><input type="radio" name="q23" value="vfat"> vfat</label><br><label><input type="radio" name="q23" value="ext4"> ext4</label><br><label><input type="radio" name="q23" value="ntfs"> ntfs</label><br></div>
+<div class="question"><p><strong>24. Which option is used to mount in read-only mode?</strong></p><label><input type="radio" name="q24" value="-o ro"> -o ro</label><br><label><input type="radio" name="q24" value="--readonly"> --readonly</label><br><label><input type="radio" name="q24" value="-ro"> -ro</label><br></div>
+<div class="question"><p><strong>25. Which command helps resize ext4 filesystem?</strong></p><label><input type="radio" name="q25" value="fsresize"> fsresize</label><br><label><input type="radio" name="q25" value="xfs_growfs"> xfs_growfs</label><br><label><input type="radio" name="q25" value="resize2fs"> resize2fs</label><br></div>
+<div class="question"><p><strong>26. Which tool initializes GPT partition table?</strong></p><label><input type="radio" name="q26" value="parted"> parted</label><br><label><input type="radio" name="q26" value="gpart"> gpart</label><br><label><input type="radio" name="q26" value="fdisk"> fdisk</label><br></div>
+<div class="question"><p><strong>27. Which command lists partitions?</strong></p><label><input type="radio" name="q27" value="lsblk"> lsblk</label><br><label><input type="radio" name="q27" value="df -l"> df -l</label><br><label><input type="radio" name="q27" value="blkid"> blkid</label><br></div>
+<div class="question"><p><strong>28. How to check filesystem type?</strong></p><label><input type="radio" name="q28" value="df -T"> df -T</label><br><label><input type="radio" name="q28" value="mount -t"> mount -t</label><br><label><input type="radio" name="q28" value="blkid -f"> blkid -f</label><br></div>
+<div class="question"><p><strong>29. Which command shows space used by inodes?</strong></p><label><input type="radio" name="q29" value="inode-usage"> inode-usage</label><br><label><input type="radio" name="q29" value="df -i"> df -i</label><br><label><input type="radio" name="q29" value="du -i"> du -i</label><br></div>
+<div class="question"><p><strong>30. What is the maximum file size for ext4?</strong></p><label><input type="radio" name="q30" value="4 TB"> 4 TB</label><br><label><input type="radio" name="q30" value="16 TB"> 16 TB</label><br><label><input type="radio" name="q30" value="2 TB"> 2 TB</label><br></div>
+<div class="question"><p><strong>31. What does mount -a do?</strong></p><label><input type="radio" name="q31" value="Mounts all entries in /etc/fstab"> Mounts all entries in /etc/fstab</label><br><label><input type="radio" name="q31" value="Mounts USB only"> Mounts USB only</label><br><label><input type="radio" name="q31" value="Unmounts all"> Unmounts all</label><br></div>
+<div class="question"><p><strong>32. How to permanently mount filesystem?</strong></p><label><input type="radio" name="q32" value="Add entry to /etc/fstab"> Add entry to /etc/fstab</label><br><label><input type="radio" name="q32" value="Run auto-mount"> Run auto-mount</label><br><label><input type="radio" name="q32" value="Edit /etc/mtab"> Edit /etc/mtab</label><br></div>
+<div class="question"><p><strong>33. Which command initializes partition table?</strong></p><label><input type="radio" name="q33" value="mount"> mount</label><br><label><input type="radio" name="q33" value="parted"> parted</label><br><label><input type="radio" name="q33" value="fdisk -n"> fdisk -n</label><br></div>
+<div class="question"><p><strong>34. What tool converts ext2 to ext3?</strong></p><label><input type="radio" name="q34" value="tune2fs -j"> tune2fs -j</label><br><label><input type="radio" name="q34" value="mkfs.ext3"> mkfs.ext3</label><br><label><input type="radio" name="q34" value="ext2to3"> ext2to3</label><br></div>
+<div class="question"><p><strong>35. What is inode?</strong></p><label><input type="radio" name="q35" value="Data block"> Data block</label><br><label><input type="radio" name="q35" value="Metadata about file"> Metadata about file</label><br><label><input type="radio" name="q35" value="Filesystem size"> Filesystem size</label><br></div>
+<div class="question"><p><strong>36. Which command displays free and used inode numbers?</strong></p><label><input type="radio" name="q36" value="inode -f"> inode -f</label><br><label><input type="radio" name="q36" value="fsck -n"> fsck -n</label><br><label><input type="radio" name="q36" value="df -i"> df -i</label><br></div>
+<div class="question"><p><strong>37. How to create swap file?</strong></p><label><input type="radio" name="q37" value="dd if=/dev/zero of=/swapfile"> dd if=/dev/zero of=/swapfile</label><br><label><input type="radio" name="q37" value="mkfile swap"> mkfile swap</label><br><label><input type="radio" name="q37" value="mkswap /swapfile"> mkswap /swapfile</label><br></div>
+<div class="question"><p><strong>38. How to enable swap file?</strong></p><label><input type="radio" name="q38" value="swapon /swapfile"> swapon /swapfile</label><br><label><input type="radio" name="q38" value="enable swap"> enable swap</label><br><label><input type="radio" name="q38" value="swapadd /swapfile"> swapadd /swapfile</label><br></div>
+<div class="question"><p><strong>39. Which tool modifies ext4 superblock?</strong></p><label><input type="radio" name="q39" value="tune2fs"> tune2fs</label><br><label><input type="radio" name="q39" value="e2fsck"> e2fsck</label><br><label><input type="radio" name="q39" value="mkfs -t"> mkfs -t</label><br></div>
+<div class="question"><p><strong>40. Which command displays filesystem statistics?</strong></p><label><input type="radio" name="q40" value="stat -f"> stat -f</label><br><label><input type="radio" name="q40" value="fsstat"> fsstat</label><br><label><input type="radio" name="q40" value="df -s"> df -s</label><br></div>
+
+<button type="button" onclick="checkAnswers()">Submit</button>
+<div id="result" class="result"></div>
+</form>
+<script>
+const answers = {'q1': '/etc/fstab', 'q2': 'df -h', 'q3': 'fsck', 'q4': 'Attaches filesystem to directory', 'q5': 'mount', 'q6': 'Defines mount points at boot', 'q7': 'mkfs.ext4', 'q8': 'df -i', 'q9': 'fdisk /dev/sdX', 'q10': 'e2label', 'q11': 'mount /dev/sdX1 /mnt', 'q12': 'umount /dev/sdX1', 'q13': 'gparted', 'q14': 'Directory to access mounted filesystem', 'q15': 'mkfs.xfs', 'q16': 'du -sh', 'q17': 'Writes buffered data to disk', 'q18': 'blkid', 'q19': 'lsblk', 'q20': '/proc/swaps', 'q21': 'XFS', 'q22': 'ext4', 'q23': 'vfat', 'q24': '-o ro', 'q25': 'resize2fs', 'q26': 'parted', 'q27': 'lsblk', 'q28': 'df -T', 'q29': 'df -i', 'q30': '16 TB', 'q31': 'Mounts all entries in /etc/fstab', 'q32': 'Add entry to /etc/fstab', 'q33': 'parted', 'q34': 'tune2fs -j', 'q35': 'Metadata about file', 'q36': 'df -i', 'q37': 'dd if=/dev/zero of=/swapfile', 'q38': 'swapon /swapfile', 'q39': 'tune2fs', 'q40': 'stat -f'};
+function checkAnswers() {
+    let score = 0;
+    let total = Object.keys(answers).length;
+    let resultHTML = "";
+    for (const [key, value] of Object.entries(answers)) {
+        const selected = document.querySelector(`input[name="${key}"]:checked`);
+        if (selected && selected.value === value) {
+            score++;
+            resultHTML += `<p style='color:green;'>Question ${key.substring(1)}: Correct</p>`;
+        } else {
+            resultHTML += `<p style='color:red;'>Question ${key.substring(1)}: Wrong (Correct: ${value})</p>`;
+        }
+    }
+    document.getElementById("result").innerHTML = `<h3>You scored ${score} out of ${total}</h3>` + resultHTML;
+}
+</script>
+</body>
+</html>

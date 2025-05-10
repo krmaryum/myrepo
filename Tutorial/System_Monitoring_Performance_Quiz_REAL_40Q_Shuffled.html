@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>System Monitoring & Performance Quiz</title>
+<style>
+    body { font-family: Arial, sans-serif; padding: 20px; background-color: #eef; }
+    .question { margin-bottom: 20px; background: #fff; padding: 10px 15px; border-radius: 5px; }
+    .result { margin-top: 20px; font-weight: bold; }
+</style>
+</head>
+<body>
+<h1>System Monitoring & Performance Quiz (40 Questions - Shuffled)</h1>
+<form id="quizForm">
+<div class="question"><p><strong>1. Which command shows real-time system processes?</strong></p><label><input type="radio" name="q1" value="watch"> watch</label><br><label><input type="radio" name="q1" value="top"> top</label><br><label><input type="radio" name="q1" value="ps -r"> ps -r</label><br></div>
+<div class="question"><p><strong>2. What does 'uptime' command show?</strong></p><label><input type="radio" name="q2" value="System load and time since boot"> System load and time since boot</label><br><label><input type="radio" name="q2" value="Current time"> Current time</label><br><label><input type="radio" name="q2" value="CPU usage only"> CPU usage only</label><br></div>
+<div class="question"><p><strong>3. Which command shows memory usage in MB?</strong></p><label><input type="radio" name="q3" value="memstat"> memstat</label><br><label><input type="radio" name="q3" value="free -m"> free -m</label><br><label><input type="radio" name="q3" value="top -m"> top -m</label><br></div>
+<div class="question"><p><strong>4. Which command lists currently running processes?</strong></p><label><input type="radio" name="q4" value="ps aux"> ps aux</label><br><label><input type="radio" name="q4" value="pidstat"> pidstat</label><br><label><input type="radio" name="q4" value="proc -list"> proc -list</label><br></div>
+<div class="question"><p><strong>5. Which command shows CPU usage summary?</strong></p><label><input type="radio" name="q5" value="top -c"> top -c</label><br><label><input type="radio" name="q5" value="cpustat"> cpustat</label><br><label><input type="radio" name="q5" value="mpstat"> mpstat</label><br></div>
+<div class="question"><p><strong>6. What tool monitors disk I/O usage?</strong></p><label><input type="radio" name="q6" value="iotop"> iotop</label><br><label><input type="radio" name="q6" value="dfstat"> dfstat</label><br><label><input type="radio" name="q6" value="iowatch"> iowatch</label><br></div>
+<div class="question"><p><strong>7. Which tool shows per-process memory usage?</strong></p><label><input type="radio" name="q7" value="memtop"> memtop</label><br><label><input type="radio" name="q7" value="procstat"> procstat</label><br><label><input type="radio" name="q7" value="smem"> smem</label><br></div>
+<div class="question"><p><strong>8. Which log file stores boot logs?</strong></p><label><input type="radio" name="q8" value="/var/log/init.log"> /var/log/init.log</label><br><label><input type="radio" name="q8" value="/etc/bootlog"> /etc/bootlog</label><br><label><input type="radio" name="q8" value="/var/log/boot.log"> /var/log/boot.log</label><br></div>
+<div class="question"><p><strong>9. Which file shows kernel messages?</strong></p><label><input type="radio" name="q9" value="/boot/kmsg"> /boot/kmsg</label><br><label><input type="radio" name="q9" value="/var/log/dmesg"> /var/log/dmesg</label><br><label><input type="radio" name="q9" value="/etc/messages"> /etc/messages</label><br></div>
+<div class="question"><p><strong>10. How to watch a file in real-time?</strong></p><label><input type="radio" name="q10" value="watch tail"> watch tail</label><br><label><input type="radio" name="q10" value="tail -f"> tail -f</label><br><label><input type="radio" name="q10" value="follow -t"> follow -t</label><br></div>
+<div class="question"><p><strong>11. Which command shows load average?</strong></p><label><input type="radio" name="q11" value="sysstat"> sysstat</label><br><label><input type="radio" name="q11" value="loadavg"> loadavg</label><br><label><input type="radio" name="q11" value="uptime"> uptime</label><br></div>
+<div class="question"><p><strong>12. How to sort 'top' output by memory?</strong></p><label><input type="radio" name="q12" value="Ctrl + M"> Ctrl + M</label><br><label><input type="radio" name="q12" value="Shift + M"> Shift + M</label><br><label><input type="radio" name="q12" value="Alt + M"> Alt + M</label><br></div>
+<div class="question"><p><strong>13. Which tool provides historical performance data?</strong></p><label><input type="radio" name="q13" value="top -h"> top -h</label><br><label><input type="radio" name="q13" value="sar"> sar</label><br><label><input type="radio" name="q13" value="ps -h"> ps -h</label><br></div>
+<div class="question"><p><strong>14. What does vmstat show?</strong></p><label><input type="radio" name="q14" value="Filesystem usage"> Filesystem usage</label><br><label><input type="radio" name="q14" value="CPU usage only"> CPU usage only</label><br><label><input type="radio" name="q14" value="Virtual memory stats"> Virtual memory stats</label><br></div>
+<div class="question"><p><strong>15. Which tool gives graphical system stats?</strong></p><label><input type="radio" name="q15" value="gnome-system-monitor"> gnome-system-monitor</label><br><label><input type="radio" name="q15" value="sys-gui"> sys-gui</label><br><label><input type="radio" name="q15" value="perfmon"> perfmon</label><br></div>
+<div class="question"><p><strong>16. Which command shows CPU info?</strong></p><label><input type="radio" name="q16" value="lscpu"> lscpu</label><br><label><input type="radio" name="q16" value="cpuinfo"> cpuinfo</label><br><label><input type="radio" name="q16" value="hwcpu"> hwcpu</label><br></div>
+<div class="question"><p><strong>17. Which file shows memory usage details?</strong></p><label><input type="radio" name="q17" value="/boot/memory"> /boot/memory</label><br><label><input type="radio" name="q17" value="/proc/meminfo"> /proc/meminfo</label><br><label><input type="radio" name="q17" value="/etc/memusage"> /etc/memusage</label><br></div>
+<div class="question"><p><strong>18. Which file shows CPU details?</strong></p><label><input type="radio" name="q18" value="/etc/cpu"> /etc/cpu</label><br><label><input type="radio" name="q18" value="/boot/cpu"> /boot/cpu</label><br><label><input type="radio" name="q18" value="/proc/cpuinfo"> /proc/cpuinfo</label><br></div>
+<div class="question"><p><strong>19. Which command shows disk usage?</strong></p><label><input type="radio" name="q19" value="diskusage"> diskusage</label><br><label><input type="radio" name="q19" value="df -h"> df -h</label><br><label><input type="radio" name="q19" value="du -h"> du -h</label><br></div>
+<div class="question"><p><strong>20. How to find large files in Linux?</strong></p><label><input type="radio" name="q20" value="locate large"> locate large</label><br><label><input type="radio" name="q20" value="ls -big"> ls -big</label><br><label><input type="radio" name="q20" value="find / -type f -size +100M"> find / -type f -size +100M</label><br></div>
+<div class="question"><p><strong>21. What does iostat show?</strong></p><label><input type="radio" name="q21" value="CPU and disk stats"> CPU and disk stats</label><br><label><input type="radio" name="q21" value="Network stats"> Network stats</label><br><label><input type="radio" name="q21" value="Process usage"> Process usage</label><br></div>
+<div class="question"><p><strong>22. What tool checks system health?</strong></p><label><input type="radio" name="q22" value="uptime"> uptime</label><br><label><input type="radio" name="q22" value="top"> top</label><br><label><input type="radio" name="q22" value="syscheck"> syscheck</label><br></div>
+<div class="question"><p><strong>23. Which tool is used for performance tuning?</strong></p><label><input type="radio" name="q23" value="boost"> boost</label><br><label><input type="radio" name="q23" value="sysperf"> sysperf</label><br><label><input type="radio" name="q23" value="tuned"> tuned</label><br></div>
+<div class="question"><p><strong>24. Which command shows all open files?</strong></p><label><input type="radio" name="q24" value="lsof"> lsof</label><br><label><input type="radio" name="q24" value="openfiles"> openfiles</label><br><label><input type="radio" name="q24" value="filecheck"> filecheck</label><br></div>
+<div class="question"><p><strong>25. What does 'watch' do?</strong></p><label><input type="radio" name="q25" value="Runs a command repeatedly"> Runs a command repeatedly</label><br><label><input type="radio" name="q25" value="Logs process"> Logs process</label><br><label><input type="radio" name="q25" value="Creates alerts"> Creates alerts</label><br></div>
+<div class="question"><p><strong>26. Which command shows free disk space?</strong></p><label><input type="radio" name="q26" value="free -d"> free -d</label><br><label><input type="radio" name="q26" value="df"> df</label><br><label><input type="radio" name="q26" value="disk -f"> disk -f</label><br></div>
+<div class="question"><p><strong>27. Which tool visualizes performance charts?</strong></p><label><input type="radio" name="q27" value="perf"> perf</label><br><label><input type="radio" name="q27" value="perfmon"> perfmon</label><br><label><input type="radio" name="q27" value="loadview"> loadview</label><br></div>
+<div class="question"><p><strong>28. Which command shows system-wide resource usage?</strong></p><label><input type="radio" name="q28" value="htop"> htop</label><br><label><input type="radio" name="q28" value="gtop"> gtop</label><br><label><input type="radio" name="q28" value="resmon"> resmon</label><br></div>
+<div class="question"><p><strong>29. Which command helps trace system calls?</strong></p><label><input type="radio" name="q29" value="traceps"> traceps</label><br><label><input type="radio" name="q29" value="syscallwatch"> syscallwatch</label><br><label><input type="radio" name="q29" value="strace"> strace</label><br></div>
+<div class="question"><p><strong>30. Which command shows TCP socket usage?</strong></p><label><input type="radio" name="q30" value="netwatch"> netwatch</label><br><label><input type="radio" name="q30" value="ss -t"> ss -t</label><br><label><input type="radio" name="q30" value="tcpstat"> tcpstat</label><br></div>
+<div class="question"><p><strong>31. Which command counts context switches?</strong></p><label><input type="radio" name="q31" value="iostat"> iostat</label><br><label><input type="radio" name="q31" value="cpustat"> cpustat</label><br><label><input type="radio" name="q31" value="vmstat"> vmstat</label><br></div>
+<div class="question"><p><strong>32. How to monitor swap usage?</strong></p><label><input type="radio" name="q32" value="free"> free</label><br><label><input type="radio" name="q32" value="dstat"> dstat</label><br><label><input type="radio" name="q32" value="du -s"> du -s</label><br></div>
+<div class="question"><p><strong>33. Which tool logs system metrics over time?</strong></p><label><input type="radio" name="q33" value="collectl"> collectl</label><br><label><input type="radio" name="q33" value="sysdump"> sysdump</label><br><label><input type="radio" name="q33" value="watchlog"> watchlog</label><br></div>
+<div class="question"><p><strong>34. Which command shows user logins?</strong></p><label><input type="radio" name="q34" value="who"> who</label><br><label><input type="radio" name="q34" value="ulog"> ulog</label><br><label><input type="radio" name="q34" value="logstat"> logstat</label><br></div>
+<div class="question"><p><strong>35. Which command shows disk read/write?</strong></p><label><input type="radio" name="q35" value="vmstat -d"> vmstat -d</label><br><label><input type="radio" name="q35" value="iostat"> iostat</label><br><label><input type="radio" name="q35" value="diski"> diski</label><br></div>
+<div class="question"><p><strong>36. What does 'du' command show?</strong></p><label><input type="radio" name="q36" value="Drive format"> Drive format</label><br><label><input type="radio" name="q36" value="Disk usage per file/folder"> Disk usage per file/folder</label><br><label><input type="radio" name="q36" value="Unmount disk"> Unmount disk</label><br></div>
+<div class="question"><p><strong>37. Which command shows file system usage?</strong></p><label><input type="radio" name="q37" value="du -t"> du -t</label><br><label><input type="radio" name="q37" value="lsfs"> lsfs</label><br><label><input type="radio" name="q37" value="df -T"> df -T</label><br></div>
+<div class="question"><p><strong>38. How to monitor process tree?</strong></p><label><input type="radio" name="q38" value="proctree"> proctree</label><br><label><input type="radio" name="q38" value="pstree"> pstree</label><br><label><input type="radio" name="q38" value="ps-tree"> ps-tree</label><br></div>
+<div class="question"><p><strong>39. Which command shows system uptime in human-readable?</strong></p><label><input type="radio" name="q39" value="uptime --pretty"> uptime --pretty</label><br><label><input type="radio" name="q39" value="uptime -p"> uptime -p</label><br><label><input type="radio" name="q39" value="sysup"> sysup</label><br></div>
+<div class="question"><p><strong>40. Which command shows kernel ring buffer?</strong></p><label><input type="radio" name="q40" value="kmsg"> kmsg</label><br><label><input type="radio" name="q40" value="dmesg"> dmesg</label><br><label><input type="radio" name="q40" value="klog"> klog</label><br></div>
+
+<button type="button" onclick="checkAnswers()">Submit</button>
+<div id="result" class="result"></div>
+</form>
+<script>
+const answers = {'q1': 'top', 'q2': 'System load and time since boot', 'q3': 'free -m', 'q4': 'ps aux', 'q5': 'mpstat', 'q6': 'iotop', 'q7': 'smem', 'q8': '/var/log/boot.log', 'q9': '/var/log/dmesg', 'q10': 'tail -f', 'q11': 'uptime', 'q12': 'Shift + M', 'q13': 'sar', 'q14': 'Virtual memory stats', 'q15': 'gnome-system-monitor', 'q16': 'lscpu', 'q17': '/proc/meminfo', 'q18': '/proc/cpuinfo', 'q19': 'df -h', 'q20': 'find / -type f -size +100M', 'q21': 'CPU and disk stats', 'q22': 'top', 'q23': 'tuned', 'q24': 'lsof', 'q25': 'Runs a command repeatedly', 'q26': 'df', 'q27': 'perf', 'q28': 'htop', 'q29': 'strace', 'q30': 'ss -t', 'q31': 'vmstat', 'q32': 'free', 'q33': 'collectl', 'q34': 'who', 'q35': 'iostat', 'q36': 'Disk usage per file/folder', 'q37': 'df -T', 'q38': 'pstree', 'q39': 'uptime -p', 'q40': 'dmesg'};
+function checkAnswers() {
+    let score = 0;
+    let total = Object.keys(answers).length;
+    let resultHTML = "";
+    for (const [key, value] of Object.entries(answers)) {
+        const selected = document.querySelector(`input[name="${key}"]:checked`);
+        if (selected && selected.value === value) {
+            score++;
+            resultHTML += `<p style='color:green;'>Question ${key.substring(1)}: Correct</p>`;
+        } else {
+            resultHTML += `<p style='color:red;'>Question ${key.substring(1)}: Wrong (Correct: ${value})</p>`;
+        }
+    }
+    document.getElementById("result").innerHTML = `<h3>You scored ${score} out of ${total}</h3>` + resultHTML;
+}
+</script>
+</body>
+</html>
