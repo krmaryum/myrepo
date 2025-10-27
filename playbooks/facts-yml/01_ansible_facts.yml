@@ -1,0 +1,10 @@
+---
+- name: Printing kernel information using ansible gather_facts
+  hosts: all
+  become: yes
+  tasks:
+    - name: Capture kernael info print it in a file
+      copy:
+        content: "The available kernel version: {{ ansible_kernel }}"
+        dest: /tmp/kernel_version.txt
+...

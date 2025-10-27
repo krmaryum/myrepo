@@ -1,0 +1,21 @@
+---
+- hosts: all
+  tasks:
+    - file:
+          path: /tmp/testdir
+          state: directory
+
+    - copy:
+          src: /etc/fstab
+          dest: /tmp/testdir
+
+    - yum:
+         name:
+           - httpd
+           - vsftpd
+ 
+    - service:
+             name: httpd
+#               - vsftpd
+             state: started
+             enabled: true

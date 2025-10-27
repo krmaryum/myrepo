@@ -1,0 +1,12 @@
+---
+- name: Ansible Playbook for making an entery in the /etc/hosts file.
+  hosts: test
+#  gather_facts: false
+  become: true
+  tasks:
+    - name: Adding a line which has ip and fqdn
+      lineinfile:
+        line: "{{ ansible_default_ipv4.address }} {{ ansible_fqdn }}"
+        dest: /etc/hosts
+...
+       

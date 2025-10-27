@@ -1,0 +1,29 @@
+---
+- name: Exporting of string type variable from the file.
+  hosts: test
+  become: true
+  gather_facts: false
+  vars_files:
+    - /home/khan/projects/playbooks/nehra/playbooks/var-yml/myvars.yml
+  tasks:
+    - name: Installing the "{{ apache }}" service
+      yum:
+        name: "{{ apache }}"
+        state: latest
+
+    - name: Starting and enabling & Starting "{{ apache }}" service
+      service:
+        name: "{{ apache }}"
+        state: started
+        enabled: true
+
+    - name: Creating a directory "{{ apache_root }}"
+      file:
+        path: "{{ apache_root }}"
+        state: directory
+
+    - name: Creating a index.html using content
+      copy:
+        content: "NITcalasses are Awesom!!!"
+        dest: "{{ apache_root }}/index.html"
+...

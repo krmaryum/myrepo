@@ -1,0 +1,15 @@
+---
+- name: Command Line Variable Example 2
+  hosts: test
+  gather_facts: false
+  become: true
+  vars: 
+    user_name: omar
+    password: abc
+  tasks:
+    - name: Adding user and password
+      user:
+        name: "{{ user_name }}"
+        state: present
+        password: "{{ password | password_hash ('sha512') }}"
+...

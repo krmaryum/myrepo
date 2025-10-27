@@ -1,0 +1,11 @@
+---
+- hosts: test
+  gather_facts: false
+  vars:
+    salutations: Assalam o Alaikum
+  tasks: 
+    - name: User defined variables
+      debug:
+        msg: "{{ salutations }}"
+...
+    

@@ -1,0 +1,13 @@
+---
+- name: Registering the variable in Ansible
+  hosts: test
+  become: true
+  gather_facts: yes
+  tasks:
+    - name: Checking The Hardware mode.
+      command: uname -m
+      register: abc
+    - name: Printing The info
+      debug:
+        var: abc.stdout
+...

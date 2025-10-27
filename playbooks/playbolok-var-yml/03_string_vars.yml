@@ -1,0 +1,30 @@
+---
+- name: Example of String type Variable playbook.
+  hosts: test
+  become: true
+  gather_facts: false
+  vars:
+    apache: httpd
+    apache_root: /var/www/html
+  tasks:
+    - name: Installing the httpd service
+      yum:
+        name: "{{ apache }}"
+        state: present
+
+    - name: Starting and enabling the httpd sevice
+      service:
+        name: "{{ apache }}"
+        state: started
+        enabled: true
+
+    - name: Creating a Directory htnl  "{{ apache_root }}" 
+      file:
+        path: "{{apache_root}}"
+        state: directory
+
+    - name: Creating a index.html with content 
+      copy:
+        content: "NITClasses are Awesome!!!"
+        dest: "{{ apache_root }}/index.html"
+... 

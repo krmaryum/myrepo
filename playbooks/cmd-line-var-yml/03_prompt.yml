@@ -1,0 +1,19 @@
+---
+- name: Command Line variable with prompt Example.
+  hosts: test
+  gather_facts: false
+  become: yes
+  vars_prompt: 
+    - name: user_name
+      prompt: "Please Enter the Username"
+      private: no
+    - name: password
+      prompt: "Please set the password"
+      private: yes
+  tasks:
+    - name: Adding the user and set the passwords
+      user:
+        name: "{{ user_name }}"
+        state: present
+        password: "{{ password | password_hash ('sha512') }}"
+...

@@ -1,0 +1,17 @@
+---
+- name: Prompt for user input
+  hosts: test
+  gather_facts: false
+  become: yes
+  vars_prompt:
+    - name: user_name
+      prompt: Plese enter your name
+      private: no
+    - name: password
+      prompt: Please enter your password
+      private: no
+  tasks:
+    - name: Print the inputs
+      debug:
+        msg: "The username is {{ user_name }} and the password is {{ password }}"
+...

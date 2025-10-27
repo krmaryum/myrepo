@@ -1,0 +1,22 @@
+---
+- hosts: all
+  tasks:
+    - file:
+          path: /tmp/testdir
+          state: directory
+
+    - copy:
+          src: /etc/fstab
+          dest: /tmp/testdir
+
+    - yum:
+         name:
+           - httpd
+           - firewalld
+
+    - service:
+             name: httpd
+#               - firewalld
+             state: started
+             enabled: true 
+               

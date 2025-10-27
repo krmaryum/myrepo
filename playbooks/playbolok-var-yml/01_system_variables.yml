@@ -1,0 +1,9 @@
+---
+- hosts: test
+  gather_facts: false
+  tasks:
+    - name: Ansible Built-in System Variables Use.
+      debug:   # debug module uses for print messeges
+        msg: "{{ inventory_hostname }}"
+        msg: "{{ hostvars }}"
+...

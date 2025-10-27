@@ -1,0 +1,28 @@
+---
+- name: daily tasks playbook.
+  hosts: all
+  gather_facts: false
+  user: khan
+  become: true
+  tasks:
+    - name: Create diretory /tmp/testdir 
+      file:
+          path: /tmp/testdir
+          state: directory 
+    - name: Copy /etc/fstab to /tmp/testdir
+      copy:
+          src: /etc/fstab
+          dest: /tmp/testdir
+    - name: installing the packages
+      yum:
+         name:   
+           - httpd
+           - wget
+    - name: starting and enabling httpd service
+      service:
+            name: httpd
+            state: started
+            enabled: true
+    - name: Installing Firewalld
+      import_tasks: /home/khan/projects/playbooks/nehra/firewall.yml
+...  

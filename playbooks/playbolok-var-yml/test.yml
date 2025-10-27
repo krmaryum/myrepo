@@ -1,0 +1,20 @@
+---
+- name: Example of Mapping/Dictionary variables
+  hosts: test
+  gather_facts: false
+  become: yes
+  tasks:
+    - name: Creating users
+      user:
+        name: "{{ item.name }}"
+        uid: "{{ item.uid }}"
+        state: absent
+      loop:
+#       - name: ali
+#          uid: 1010
+        - name: omar
+          uid: 1020
+        - name: bakar
+          uid: 1030
+...
+

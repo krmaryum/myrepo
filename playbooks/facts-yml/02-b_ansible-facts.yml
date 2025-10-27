@@ -1,0 +1,11 @@
+---
+- name: 2nd Method of an entery of the line in /etc/hosts.
+  hosts: test
+  become: true
+  tasks:
+    - name: Append the ip, fqdn and hostname
+      lineinfile:
+        line: "{{ ansible_default_ipv4['address'] }} {{ ansible_fqdn }} {{  ansible_hostname }}"
+        dest: /etc/hosts
+...
+  

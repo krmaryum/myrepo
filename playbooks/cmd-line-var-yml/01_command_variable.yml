@@ -1,0 +1,12 @@
+---
+- name: Command Line Variable Example
+  hosts: test
+  gather_facts: false
+  become: yes
+  tasks:
+    - name: Adding User and Applying the Password
+      user:
+        name: "{{ user_name }}"
+        state: present
+        password: "{{ password }}"
+...

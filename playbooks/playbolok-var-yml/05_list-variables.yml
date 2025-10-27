@@ -1,0 +1,16 @@
+---
+- name: Example of Listing/Array Variables
+  hosts: test
+  gather_facts: false
+  become: true
+  vars:
+    mypkgs:
+      - ftp
+      - vsftpd
+      - zsh
+  tasks:
+    - name: Installing The Packages
+      yum:
+        name: "{{ mypkgs }}"
+        state: absent
+...

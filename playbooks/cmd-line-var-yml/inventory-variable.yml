@@ -1,0 +1,14 @@
+---
+- name: Inventory Variable Example
+  hosts: all
+  gather_facts: false
+  become: yes
+  tasks: 
+    - name: Creating Directories
+      file: 
+        path: "{{ dir }}"
+        state: directory
+    - name: Making Sure Directory is Created
+      debug:
+        msg: "{{ dir }}"
+...
